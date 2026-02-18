@@ -1,0 +1,218 @@
+{# 
+    Component: Blog
+    Variables:
+    - title: string
+    - posts: array of { title: string, excerpt: string, author: string, date: string, image: string, category: string, link: string }
+    - variant: 'grid' | 'list' | 'featured'
+#}
+
+<section class="c-blog c-blog--{{ variant | default('grid') }}">
+    <div class="c-blog__container">
+        <h2 class="c-blog__main-title">{{ title | default("Latest Articles") }}</h2>
+        <div class="c-blog__posts">
+            {% for post in posts | default([
+                {
+                    title: "Getting Started with Component-Based Design",
+                    excerpt: "Learn the fundamentals of building maintainable websites using reusable components.",
+                    author: "John Doe",
+                    date: "Feb 15, 2026",
+                    category: "Tutorial",
+                    image: "📝",
+                    link: "#"
+                },
+                {
+                    title: "10 Best Practices for Static Sites",
+                    excerpt: "Improve your static site performance and maintainability with these proven strategies.",
+                    author: "Jane Smith",
+                    date: "Feb 10, 2026",
+                    category: "Best Practices",
+                    image: "🚀",
+                    link: "#"
+                },
+                {
+                    title: "Why Choose Static Over Dynamic",
+                    excerpt: "Explore the benefits of static site generation for modern web development.",
+                    author: "Mike Johnson",
+                    date: "Feb 5, 2026",
+                    category: "Opinion",
+                    image: "💡",
+                    link: "#"
+                }
+            ]) %}
+            <article class="c-blog__post">
+                <div class="c-blog__image">
+                    <span class="c-blog__icon">{{ post.image }}</span>
+                    <span class="c-blog__category">{{ post.category }}</span>
+                </div>
+                <div class="c-blog__content">
+                    <h3 class="c-blog__title">{{ post.title }}</h3>
+                    <p class="c-blog__excerpt">{{ post.excerpt }}</p>
+                    <div class="c-blog__meta">
+                        <span class="c-blog__author">{{ post.author }}</span>
+                        <span class="c-blog__separator">•</span>
+                        <span class="c-blog__date">{{ post.date }}</span>
+                    </div>
+                    <a href="{{ post.link }}" class="c-blog__link">Read More →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .c-blog {
+        padding: 5rem 0;
+        background: #ffffff;
+    }
+
+    .c-blog__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .c-blog__main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 4rem;
+        color: #212529;
+        letter-spacing: -1px;
+    }
+
+    .c-blog__posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .c-blog--list .c-blog__posts {
+        grid-template-columns: 1fr;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .c-blog--featured .c-blog__posts {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .c-blog--featured .c-blog__post:first-child {
+        grid-row: span 2;
+    }
+
+    .c-blog__post {
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-blog__post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .c-blog--list .c-blog__post {
+        flex-direction: row;
+    }
+
+    .c-blog__image {
+        position: relative;
+        height: 240px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .c-blog--list .c-blog__image {
+        width: 300px;
+        height: auto;
+    }
+
+    .c-blog__icon {
+        font-size: 4rem;
+    }
+
+    .c-blog__category {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255,255,255,0.95);
+        color: #667eea;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .c-blog__content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .c-blog__title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        color: #212529;
+        line-height: 1.3;
+    }
+
+    .c-blog__excerpt {
+        color: #6c757d;
+        line-height: 1.6;
+        margin: 0 0 1rem 0;
+        flex: 1;
+    }
+
+    .c-blog__meta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        color: #868e96;
+        margin-bottom: 1rem;
+    }
+
+    .c-blog__separator {
+        opacity: 0.5;
+    }
+
+    .c-blog__link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
+
+    .c-blog__link:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .c-blog__posts,
+        .c-blog--featured .c-blog__posts {
+            grid-template-columns: 1fr;
+        }
+
+        .c-blog--list .c-blog__post {
+            flex-direction: column;
+        }
+
+        .c-blog--list .c-blog__image {
+            width: 100%;
+            height: 240px;
+        }
+    }
+</style>

@@ -1,0 +1,81 @@
+{# 
+    Component: Badge
+    Variables:
+    - text: string
+    - variant: 'default' | 'success' | 'warning' | 'error' | 'info'
+    - size: 'small' | 'medium' | 'large'
+    - pill: boolean
+#}
+
+<span class="c-badge c-badge--{{ variant | default('default') }} c-badge--{{ size | default('medium') }} {% if pill %}c-badge--pill{% endif %}">
+    {{ text | default("Badge") }}
+</span>
+
+<style>
+    .c-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        vertical-align: middle;
+        transition: all 0.2s;
+    }
+
+    /* Sizes */
+    .c-badge--small {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        border-radius: 4px;
+    }
+
+    .c-badge--medium {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 6px;
+    }
+
+    .c-badge--large {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    /* Pill */
+    .c-badge--pill {
+        border-radius: 50px;
+    }
+
+    /* Variants */
+    .c-badge--default {
+        background: #6c757d;
+        color: white;
+    }
+
+    .c-badge--success {
+        background: #28a745;
+        color: white;
+    }
+
+    .c-badge--warning {
+        background: #ffc107;
+        color: #333;
+    }
+
+    .c-badge--error {
+        background: #dc3545;
+        color: white;
+    }
+
+    .c-badge--info {
+        background: #007bff;
+        color: white;
+    }
+
+    /* Hover effects */
+    .c-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+</style>

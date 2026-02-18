@@ -1,0 +1,172 @@
+{# 
+    Component: Testimonials
+    Variables:
+    - title: string
+    - testimonials: array of { name: string, role: string, company: string, content: string, avatar: string }
+    - variant: 'grid' | 'carousel' | 'single'
+#}
+
+<section class="c-testimonials c-testimonials--{{ variant | default('grid') }}">
+    <div class="c-testimonials__container">
+        <h2 class="c-testimonials__title">{{ title | default("What Our Customers Say") }}</h2>
+        <div class="c-testimonials__wrapper">
+            {% for testimonial in testimonials | default([
+                { 
+                    name: "Sarah Johnson", 
+                    role: "Frontend Developer", 
+                    company: "TechCorp",
+                    content: "This static template system has saved me countless hours. The component-based approach is genius!",
+                    avatar: "👩‍💻"
+                },
+                { 
+                    name: "Michael Chen", 
+                    role: "Product Designer", 
+                    company: "DesignStudio",
+                    content: "Clean, maintainable, and incredibly fast. Perfect for prototyping and production.",
+                    avatar: "👨‍🎨"
+                },
+                { 
+                    name: "Emma Davis", 
+                    role: "Full Stack Developer", 
+                    company: "StartupXYZ",
+                    content: "The best static site generator I've used. Simple yet powerful. Highly recommended!",
+                    avatar: "👩‍💼"
+                }
+            ]) %}
+            <div class="c-testimonials__item">
+                <div class="c-testimonials__content">
+                    <p class="c-testimonials__quote">"{{ testimonial.content }}"</p>
+                </div>
+                <div class="c-testimonials__author">
+                    <div class="c-testimonials__avatar">{{ testimonial.avatar }}</div>
+                    <div class="c-testimonials__info">
+                        <div class="c-testimonials__name">{{ testimonial.name }}</div>
+                        <div class="c-testimonials__role">{{ testimonial.role }} at {{ testimonial.company }}</div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .c-testimonials {
+        padding: 5rem 0;
+        background: #f8f9fa;
+    }
+
+    .c-testimonials__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .c-testimonials__title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 4rem;
+        color: #212529;
+        letter-spacing: -1px;
+    }
+
+    .c-testimonials__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    .c-testimonials--single .c-testimonials__wrapper {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .c-testimonials--carousel .c-testimonials__wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .c-testimonials--carousel .c-testimonials__item {
+        min-width: 400px;
+        scroll-snap-align: start;
+    }
+
+    .c-testimonials__item {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .c-testimonials__item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .c-testimonials__content {
+        flex: 1;
+    }
+
+    .c-testimonials__quote {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #495057;
+        margin: 0;
+        font-style: italic;
+    }
+
+    .c-testimonials__author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+
+    .c-testimonials__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .c-testimonials__info {
+        flex: 1;
+    }
+
+    .c-testimonials__name {
+        font-weight: 700;
+        color: #212529;
+        font-size: 1rem;
+    }
+
+    .c-testimonials__role {
+        font-size: 0.875rem;
+        color: #6c757d;
+        margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+        .c-testimonials__wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .c-testimonials--carousel .c-testimonials__item {
+            min-width: 300px;
+        }
+    }
+</style>

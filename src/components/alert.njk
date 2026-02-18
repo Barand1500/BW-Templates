@@ -1,0 +1,210 @@
+{# 
+    Component: Alert/Notification
+    Variables:
+    - message: string
+    - type: 'info' | 'success' | 'warning' | 'error'
+    - variant: 'default' | 'filled' | 'outlined'
+    - dismissible: boolean
+#}
+
+<div class="c-alert c-alert--{{ type | default('info') }} c-alert--{{ variant | default('default') }}" role="alert">
+    <div class="c-alert__icon">
+        {% if type == 'success' %}✓
+        {% elif type == 'warning' %}⚠
+        {% elif type == 'error' %}✕
+        {% else %}ℹ
+        {% endif %}
+    </div>
+    <div class="c-alert__content">
+        <p class="c-alert__message">{{ message | default("This is an alert message.") }}</p>
+    </div>
+    {% if dismissible %}
+    <button class="c-alert__close" onclick="this.parentElement.remove()" aria-label="Close">×</button>
+    {% endif %}
+</div>
+
+<style>
+    .c-alert {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        position: relative;
+        animation: slideInDown 0.3s ease-out;
+    }
+
+    @keyframes slideInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .c-alert__icon {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .c-alert__content {
+        flex: 1;
+    }
+
+    .c-alert__message {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .c-alert__close {
+        background: none;
+        border: none;
+        font-size: 1.75rem;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        transition: all 0.2s;
+        opacity: 0.6;
+    }
+
+    .c-alert__close:hover {
+        opacity: 1;
+        background: rgba(0,0,0,0.05);
+    }
+
+    /* Info */
+    .c-alert--info {
+        background: #e7f3ff;
+        color: #004085;
+        border-left: 4px solid #007bff;
+    }
+
+    .c-alert--info .c-alert__icon {
+        background: #007bff;
+        color: white;
+    }
+
+    /* Success */
+    .c-alert--success {
+        background: #d4edda;
+        color: #155724;
+        border-left: 4px solid #28a745;
+    }
+
+    .c-alert--success .c-alert__icon {
+        background: #28a745;
+        color: white;
+    }
+
+    /* Warning */
+    .c-alert--warning {
+        background: #fff3cd;
+        color: #856404;
+        border-left: 4px solid #ffc107;
+    }
+
+    .c-alert--warning .c-alert__icon {
+        background: #ffc107;
+        color: #333;
+    }
+
+    /* Error */
+    .c-alert--error {
+        background: #f8d7da;
+        color: #721c24;
+        border-left: 4px solid #dc3545;
+    }
+
+    .c-alert--error .c-alert__icon {
+        background: #dc3545;
+        color: white;
+    }
+
+    /* Filled Variant */
+    .c-alert--filled.c-alert--info {
+        background: #007bff;
+        color: white;
+        border-left: none;
+    }
+
+    .c-alert--filled.c-alert--success {
+        background: #28a745;
+        color: white;
+        border-left: none;
+    }
+
+    .c-alert--filled.c-alert--warning {
+        background: #ffc107;
+        color: #333;
+        border-left: none;
+    }
+
+    .c-alert--filled.c-alert--error {
+        background: #dc3545;
+        color: white;
+        border-left: none;
+    }
+
+    .c-alert--filled .c-alert__icon {
+        background: rgba(255,255,255,0.2);
+    }
+
+    .c-alert--filled .c-alert__close:hover {
+        background: rgba(255,255,255,0.2);
+    }
+
+    /* Outlined Variant */
+    .c-alert--outlined {
+        background: white;
+        border: 2px solid;
+    }
+
+    .c-alert--outlined.c-alert--info {
+        border-color: #007bff;
+    }
+
+    .c-alert--outlined.c-alert--success {
+        border-color: #28a745;
+    }
+
+    .c-alert--outlined.c-alert--warning {
+        border-color: #ffc107;
+    }
+
+    .c-alert--outlined.c-alert--error {
+        border-color: #dc3545;
+    }
+
+    @media (max-width: 768px) {
+        .c-alert {
+            padding: 0.875rem 1rem;
+        }
+
+        .c-alert__icon {
+            font-size: 1.25rem;
+            width: 24px;
+            height: 24px;
+        }
+
+        .c-alert__message {
+            font-size: 0.875rem;
+        }
+    }
+</style>

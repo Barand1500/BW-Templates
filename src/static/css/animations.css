@@ -1,0 +1,255 @@
+/* 
+ * Animation System
+ * CSS keyframes and animation utilities
+ */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shimmer/Loading Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Animation Classes */
+[data-animate] {
+    opacity: 0;
+}
+
+[data-animate].animate-in {
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+/* Fade animations */
+[data-animate="fade"].animate-in {
+    animation-name: fadeIn;
+}
+
+/* Slide animations */
+[data-animate="slide-up"].animate-in {
+    animation-name: slideUp;
+}
+
+[data-animate="slide-down"].animate-in {
+    animation-name: slideDown;
+}
+
+[data-animate="slide-left"].animate-in {
+    animation-name: slideInLeft;
+}
+
+[data-animate="slide-right"].animate-in {
+    animation-name: slideInRight;
+}
+
+/* Scale animation */
+[data-animate="scale"].animate-in {
+    animation-name: scaleIn;
+}
+
+/* Continuous animations */
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Page load animation */
+body {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+/* Hover animations */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(0,123,255,0.5);
+}
+
+/* Stagger animation support */
+[data-stagger] > * {
+    animation-name: slideUp;
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+/* Loading shimmer */
+.loading-shimmer {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+[data-theme="dark"] .loading-shimmer {
+    background: linear-gradient(
+        90deg,
+        #2d2d2d 25%,
+        #3a3a3a 50%,
+        #2d2d2d 75%
+    );
+    background-size: 1000px 100%;
+}
+
+/* Transition utilities */
+.transition-fast {
+    transition: all 150ms ease-in-out;
+}
+
+.transition-base {
+    transition: all 250ms ease-in-out;
+}
+
+.transition-slow {
+    transition: all 350ms ease-in-out;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

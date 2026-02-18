@@ -1,0 +1,98 @@
+{# 
+    Component: Breadcrumb
+    Variables:
+    - items: array of { label: string, url: string }
+    - variant: 'default' | 'arrows' | 'slashes'
+#}
+
+<nav class="c-breadcrumb c-breadcrumb--{{ variant | default('default') }}" aria-label="Breadcrumb">
+    <ol class="c-breadcrumb__list">
+        {% for item in items | default([
+            { label: "Home", url: "/" },
+            { label: "Products", url: "/products" },
+            { label: "Category", url: "#" }
+        ]) %}
+        <li class="c-breadcrumb__item {% if loop.last %}c-breadcrumb__item--active{% endif %}">
+            {% if not loop.last %}
+            <a href="{{ item.url }}" class="c-breadcrumb__link">{{ item.label }}</a>
+            {% else %}
+            <span class="c-breadcrumb__current">{{ item.label }}</span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+</nav>
+
+<style>
+    .c-breadcrumb {
+        padding: 1rem 0;
+    }
+
+    .c-breadcrumb__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .c-breadcrumb__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .c-breadcrumb__item::after {
+        content: "›";
+        color: #6c757d;
+        font-size: 1.25rem;
+    }
+
+    .c-breadcrumb__item:last-child::after {
+        display: none;
+    }
+
+    .c-breadcrumb__link {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .c-breadcrumb__link:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    .c-breadcrumb__current {
+        color: #6c757d;
+        font-weight: 600;
+    }
+
+    /* Arrows Variant */
+    .c-breadcrumb--arrows .c-breadcrumb__item::after {
+        content: "→";
+    }
+
+    /* Slashes Variant */
+    .c-breadcrumb--slashes .c-breadcrumb__item::after {
+        content: "/";
+        font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .c-breadcrumb__item {
+            font-size: 0.875rem;
+        }
+
+        .c-breadcrumb__link,
+        .c-breadcrumb__current {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+</style>

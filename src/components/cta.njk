@@ -1,0 +1,75 @@
+{# 
+    Component: CTA
+    Variables:
+    - title: string
+    - ctaLabel: string
+    - variant: 'banner' | 'card'
+#}
+
+<section class="c-cta c-cta--{{ variant | default('banner') }}">
+    <div class="c-cta__container">
+        <div class="c-cta__wrapper">
+            <h2 class="c-cta__title">{{ title | default("Ready to get started?") }}</h2>
+            <p class="c-cta__desc">Join thousands of developers building faster with StaticRepo.</p>
+            <div class="c-cta__actions">
+                <a href="#" class="c-cta__btn">{{ ctaLabel | default("Get Started for Free") }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .c-cta {
+        padding: 4rem 0;
+        background: #fff;
+    }
+
+    .c-cta__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .c-cta__wrapper {
+        background: #007bff;
+        color: white;
+        padding: 4rem 2rem;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .c-cta--card .c-cta__wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0 20px 40px rgba(0,123,255,0.2);
+    }
+
+    .c-cta__title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: -1px;
+    }
+
+    .c-cta__desc {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 2.5rem;
+    }
+
+    .c-cta__btn {
+        display: inline-block;
+        background: white;
+        color: #007bff;
+        padding: 1rem 2.5rem;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .c-cta__btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+</style>

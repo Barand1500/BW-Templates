@@ -1,0 +1,141 @@
+{# 
+    Component: Search Bar
+    Variables:
+    - placeholder: string
+    - variant: 'default' | 'hero' | 'minimal'
+#}
+
+<div class="c-search-bar c-search-bar--{{ variant | default('default') }}">
+    <form class="c-search-bar__form">
+        <input 
+            type="search" 
+            class="c-search-bar__input" 
+            placeholder="{{ placeholder | default('Search...') }}" 
+        />
+        <button type="submit" class="c-search-bar__button">
+            <span class="c-search-bar__icon">🔍</span>
+            <span class="c-search-bar__text">Search</span>
+        </button>
+    </form>
+</div>
+
+<style>
+    .c-search-bar {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .c-search-bar__form {
+        display: flex;
+        gap: 0.5rem;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s;
+    }
+
+    .c-search-bar__form:focus-within {
+        box-shadow: 0 8px 24px rgba(0,123,255,0.2);
+    }
+
+    .c-search-bar__input {
+        flex: 1;
+        padding: 0.875rem 1.25rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+        background: transparent;
+    }
+
+    .c-search-bar__input:focus {
+        outline: none;
+    }
+
+    .c-search-bar__button {
+        padding: 0.875rem 1.5rem;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        white-space: nowrap;
+    }
+
+    .c-search-bar__button:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .c-search-bar__icon {
+        font-size: 1.2rem;
+    }
+
+    /* Hero Variant */
+    .c-search-bar--hero {
+        max-width: 800px;
+    }
+
+    .c-search-bar--hero .c-search-bar__form {
+        padding: 0.75rem;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .c-search-bar--hero .c-search-bar__input {
+        font-size: 1.125rem;
+        padding: 1.125rem 1.5rem;
+    }
+
+    .c-search-bar--hero .c-search-bar__button {
+        padding: 1.125rem 2rem;
+        font-size: 1.125rem;
+    }
+
+    /* Minimal Variant */
+    .c-search-bar--minimal .c-search-bar__form {
+        box-shadow: none;
+        border: 2px solid #e9ecef;
+        padding: 0.25rem;
+    }
+
+    .c-search-bar--minimal .c-search-bar__form:focus-within {
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+    }
+
+    .c-search-bar--minimal .c-search-bar__button {
+        background: transparent;
+        color: #007bff;
+    }
+
+    .c-search-bar--minimal .c-search-bar__button:hover {
+        background: #f8f9fa;
+        transform: none;
+    }
+
+    .c-search-bar--minimal .c-search-bar__text {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .c-search-bar__text {
+            display: none;
+        }
+
+        .c-search-bar__button {
+            padding: 0.875rem 1rem;
+        }
+
+        .c-search-bar--hero .c-search-bar__button {
+            padding: 1.125rem 1.25rem;
+        }
+    }
+</style>

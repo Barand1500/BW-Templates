@@ -1,0 +1,175 @@
+{# 
+    Component: Contact Form
+    Variables:
+    - title: string
+    - subtitle: string
+    - variant: 'minimal' | 'boxed' | 'split'
+#}
+
+<section class="c-contact-form c-contact-form--{{ variant | default('minimal') }}">
+    <div class="c-contact-form__container">
+        <div class="c-contact-form__header">
+            <h2 class="c-contact-form__title">{{ title | default("Get In Touch") }}</h2>
+            <p class="c-contact-form__subtitle">{{ subtitle | default("We'd love to hear from you. Send us a message and we'll respond as soon as possible.") }}</p>
+        </div>
+        <form class="c-contact-form__form" data-validate>
+            <div class="c-contact-form__row">
+                <div class="c-contact-form__field">
+                    <label class="c-contact-form__label">Name *</label>
+                    <input type="text" class="c-contact-form__input" placeholder="Your name" required />
+                </div>
+                <div class="c-contact-form__field">
+                    <label class="c-contact-form__label">Email *</label>
+                    <input type="email" class="c-contact-form__input" placeholder="your@email.com" required />
+                </div>
+            </div>
+            <div class="c-contact-form__field">
+                <label class="c-contact-form__label">Subject</label>
+                <input type="text" class="c-contact-form__input" placeholder="What is this about?" />
+            </div>
+            <div class="c-contact-form__field">
+                <label class="c-contact-form__label">Message *</label>
+                <textarea class="c-contact-form__textarea" placeholder="Your message..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="c-contact-form__button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<style>
+    .c-contact-form {
+        padding: 4rem 0;
+        background: #f8f9fa;
+    }
+
+    .c-contact-form__container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .c-contact-form__header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .c-contact-form__title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+
+    .c-contact-form__subtitle {
+        font-size: 1.1rem;
+        color: #6c757d;
+        line-height: 1.6;
+    }
+
+    .c-contact-form__form {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .c-contact-form__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .c-contact-form__field {
+        margin-bottom: 1.5rem;
+    }
+
+    .c-contact-form__label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #495057;
+        font-size: 0.95rem;
+    }
+
+    .c-contact-form__input,
+    .c-contact-form__textarea {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.2s;
+        background: white;
+    }
+
+    .c-contact-form__input:focus,
+    .c-contact-form__textarea:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+    }
+
+    .c-contact-form__textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .c-contact-form__button {
+        width: 100%;
+        padding: 1rem;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .c-contact-form__button:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    }
+
+    /* Boxed Variant */
+    .c-contact-form--boxed {
+        background: white;
+    }
+
+    .c-contact-form--boxed .c-contact-form__form {
+        border: 2px solid #e9ecef;
+    }
+
+    /* Split Variant */
+    .c-contact-form--split .c-contact-form__container {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .c-contact-form--split .c-contact-form__header {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .c-contact-form__row {
+            grid-template-columns: 1fr;
+        }
+
+        .c-contact-form--split .c-contact-form__container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .c-contact-form__form {
+            padding: 1.5rem;
+        }
+    }
+</style>

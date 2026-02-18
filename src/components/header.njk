@@ -1,0 +1,104 @@
+{# 
+    Component: Header
+    Variables:
+    - brand: string
+    - navItems: array of { label: string, url: string }
+    - variant: 'light' | 'dark' | 'transparent'
+#}
+
+<header class="c-header c-header--{{ variant | default('light') }}">
+    <div class="c-header__container">
+        <a href="/" class="c-header__brand">{{ brand | default("BRAND") }}</a>
+        <nav class="c-header__nav">
+            {% for item in navItems %}
+                <a href="{{ item.url }}" class="c-header__link">{{ item.label }}</a>
+            {% endfor %}
+        </nav>
+        <div class="c-header__actions">
+            <button class="c-header__btn">Get Started</button>
+        </div>
+    </div>
+</header>
+
+<style>
+    .c-header {
+        --header-bg: #ffffff;
+        --header-color: #333333;
+        --header-border: #eeeeee;
+        
+        background: var(--header-bg);
+        color: var(--header-color);
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--header-border);
+        font-family: inherit;
+        transition: all 0.3s ease;
+    }
+
+    .c-header--dark {
+        --header-bg: #1a1a1a;
+        --header-color: #ffffff;
+        --header-border: #333333;
+    }
+
+    .c-header--transparent {
+        --header-bg: transparent;
+        --header-color: #ffffff;
+        --header-border: rgba(255,255,255,0.1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .c-header__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .c-header__brand {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--header-color);
+        letter-spacing: -1px;
+    }
+
+    .c-header__nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .c-header__link {
+        text-decoration: none;
+        color: var(--header-color);
+        font-size: 0.95rem;
+        font-weight: 500;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+
+    .c-header__link:hover {
+        opacity: 1;
+    }
+
+    .c-header__btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .c-header__btn:hover {
+        transform: translateY(-2px);
+        background: #0056b3;
+    }
+</style>

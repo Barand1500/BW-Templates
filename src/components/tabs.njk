@@ -1,0 +1,174 @@
+{# 
+    Component: Tabs
+    Variables:
+    - tabs: array of { id: string, label: string, content: string }
+    - variant: 'default' | 'pills' | 'underline'
+#}
+
+<div class="c-tabs c-tabs--{{ variant | default('default') }}">
+    <div class="c-tabs__nav" role="tablist">
+        {% for tab in tabs | default([
+            { id: "tab1", label: "Overview", content: "Overview content goes here with detailed information." },
+            { id: "tab2", label: "Features", content: "List of features and capabilities." },
+            { id: "tab3", label: "Pricing", content: "Pricing plans and subscription options." }
+        ]) %}
+        <button 
+            class="c-tabs__button {% if loop.first %}is-active{% endif %}" 
+            data-tab="{{ tab.id }}"
+            role="tab"
+            aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+            onclick="activateTab(event, '{{ tab.id }}')">
+            {{ tab.label }}
+        </button>
+        {% endfor %}
+    </div>
+    <div class="c-tabs__panels">
+        {% for tab in tabs | default([
+            { id: "tab1", label: "Overview", content: "Overview content goes here with detailed information." },
+            { id: "tab2", label: "Features", content: "List of features and capabilities." },
+            { id: "tab3", label: "Pricing", content: "Pricing plans and subscription options." }
+        ]) %}
+        <div 
+            class="c-tabs__panel {% if loop.first %}is-active{% endif %}" 
+            id="{{ tab.id }}"
+            role="tabpanel">
+            <p>{{ tab.content }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function activateTab(event, tabId) {
+    const tabsContainer = event.target.closest('.c-tabs');
+    
+    // Deactivate all tabs and panels
+    tabsContainer.querySelectorAll('.c-tabs__button').forEach(btn => {
+        btn.classList.remove('is-active');
+        btn.setAttribute('aria-selected', 'false');
+    });
+    tabsContainer.querySelectorAll('.c-tabs__panel').forEach(panel => {
+        panel.classList.remove('is-active');
+    });
+    
+    // Activate clicked tab and corresponding panel
+    event.target.classList.add('is-active');
+    event.target.setAttribute('aria-selected', 'true');
+    tabsContainer.querySelector(`#${tabId}`).classList.add('is-active');
+}
+</script>
+
+<style>
+    .c-tabs {
+        margin: 2rem 0;
+    }
+
+    .c-tabs__nav {
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 2px solid #e9ecef;
+        margin-bottom: 1.5rem;
+    }
+
+    .c-tabs__button {
+        padding: 0.875rem 1.5rem;
+        background: transparent;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #6c757d;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+    }
+
+    .c-tabs__button::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #007bff;
+        transform: scaleX(0);
+        transition: transform 0.2s;
+    }
+
+    .c-tabs__button:hover {
+        color: #007bff;
+        background: #f8f9fa;
+    }
+
+    .c-tabs__button.is-active {
+        color: #007bff;
+    }
+
+    .c-tabs__button.is-active::after {
+        transform: scaleX(1);
+    }
+
+    .c-tabs__panels {
+        padding: 0;
+    }
+
+    .c-tabs__panel {
+        display: none;
+        animation: fadeIn 0.3s;
+    }
+
+    .c-tabs__panel.is-active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Pills Variant */
+    .c-tabs--pills .c-tabs__nav {
+        border-bottom: none;
+        gap: 0.75rem;
+    }
+
+    .c-tabs--pills .c-tabs__button {
+        border-radius: 50px;
+        background: #f8f9fa;
+    }
+
+    .c-tabs--pills .c-tabs__button::after {
+        display: none;
+    }
+
+    .c-tabs--pills .c-tabs__button:hover,
+    .c-tabs--pills .c-tabs__button.is-active {
+        background: #007bff;
+        color: white;
+    }
+
+    /* Underline Variant */
+    .c-tabs--underline .c-tabs__button {
+        border-bottom: 3px solid transparent;
+    }
+
+    .c-tabs--underline .c-tabs__button::after {
+        display: none;
+    }
+
+    .c-tabs--underline .c-tabs__button.is-active {
+        border-bottom-color: #007bff;
+    }
+
+    @media (max-width: 768px) {
+        .c-tabs__nav {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .c-tabs__button {
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+    }
+</style>

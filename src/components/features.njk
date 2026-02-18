@@ -1,0 +1,102 @@
+{# 
+    Component: Features
+    Variables:
+    - title: string
+    - items: array of { title: string, desc: string, icon: string }
+    - variant: 'grid' | 'list'
+#}
+
+<section class="c-features c-features--{{ variant | default('grid') }}">
+    <div class="c-features__container">
+        <h2 class="c-features__main-title">{{ title | default("Why Choose Us?") }}</h2>
+        <div class="c-features__items">
+            {% for item in items | default([
+                { title: "Fast Performance", desc: "Optimized for speed and SEO out of the box.", icon: "⚡" },
+                { title: "Zero Dependencies", desc: "No complex frameworks. Just pure HTML and CSS.", icon: "📦" },
+                { title: "Fully Responsive", desc: "Looks great on every screen size from mobile to desktop.", icon: "📱" }
+            ]) %}
+            <div class="c-features__item">
+                <div class="c-features__icon">{{ item.icon }}</div>
+                <h3 class="c-features__item-title">{{ item.title }}</h3>
+                <p class="c-features__item-desc">{{ item.desc }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .c-features {
+        padding: 5rem 0;
+        background: #fff;
+        color: #333;
+    }
+
+    .c-features__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .c-features__main-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .c-features__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    .c-features--list .c-features__items {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .c-features__item {
+        padding: 2.5rem;
+        background: #f8f9fa;
+        border-radius: 16px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .c-features__item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .c-features--list .c-features__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .c-features__icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .c-features--list .c-features__icon {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .c-features__item-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .c-features__item-desc {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+</style>
