@@ -270,12 +270,15 @@ body {
     border: 1px solid rgba(226, 232, 240, 0.8);
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 1;
 }
 
 .component-card:hover {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
     transform: translateY(-4px);
     border-color: var(--primary-color);
+    z-index: 10;
 }
 
 .component-header {
@@ -655,4 +658,22 @@ code[class*="language-"] {
     .main-content {
         padding: 1rem;
     }
+}
+
+/* ===== Dropdown Menu Interactivity ===== */
+/* Navbar Dropdown Menu */
+.component-preview [style*="position: relative"] button:hover + [style*="position: absolute"],
+.component-preview [style*="position: relative"]:hover > [style*="position: absolute"][style*="display: none"] {
+    display: block !important;
+}
+
+/* Profile Dropdown */
+.component-preview button:hover + div[style*="position: absolute"][style*="display: none"],
+.component-preview div[style*="position: relative"]:hover > div[style*="position: absolute"][style*="display: none"] {
+    display: block !important;
+}
+
+/* Dropdown hover effects */
+.component-preview a[href]:hover {
+    background: #f9fafb !important;
 }

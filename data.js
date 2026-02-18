@@ -1730,7 +1730,1674 @@ function updateProgress(id, value) {
         js: `// Toggle monthly/yearly pricing`
     },
 
-    // TOPLAM: 49 COMPONENT
+    // ===== YENİ KATEGORİ: AUTHENTICATION =====
+    {
+        id: 50,
+        category: 'Authentication',
+        title: 'Login Form',
+        html: `<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #667eea, #764ba2); padding: 2rem;">
+    <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 420px; width: 100%;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2.5rem;">🔐</div>
+            <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #1e293b;">Hoş Geldiniz</h2>
+            <p style="color: #64748b;">Hesabınıza giriş yapın</p>
+        </div>
+        <form>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">E-posta</label>
+                <input type="email" placeholder="ornek@email.com" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; transition: all 0.3s;">
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Şifre</label>
+                <input type="password" placeholder="••••••••" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem;">
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                    <input type="checkbox" style="width: 18px; height: 18px;">
+                    <span style="font-size: 0.875rem; color: #64748b;">Beni Hatırla</span>
+                </label>
+                <a href="#" style="font-size: 0.875rem; color: #3b82f6; text-decoration: none; font-weight: 600;">Şifremi Unuttum?</a>
+            </div>
+            <button type="submit" style="width: 100%; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 1rem;">Giriş Yap</button>
+            <div style="text-align: center; color: #64748b; font-size: 0.875rem;">
+                Hesabınız yok mu? <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 600;">Kayıt Olun</a>
+            </div>
+        </form>
+    </div>
+</div>`,
+        css: `input:focus { border-color: #667eea; outline: none; }`,
+        js: `// Form validation`
+    },
+    {
+        id: 51,
+        category: 'Authentication',
+        title: 'Register Form',
+        html: `<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #f093fb, #f5576c); padding: 2rem;">
+    <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 520px; width: 100%;">
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #1e293b; text-align: center;">Hesap Oluştur</h2>
+        <p style="color: #64748b; text-align: center; margin-bottom: 2rem;">Ücretsiz hesap oluşturun</p>
+        <form>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <input type="text" placeholder="Ad" style="padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem;">
+                <input type="text" placeholder="Soyad" style="padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem;">
+            </div>
+            <input type="email" placeholder="E-posta" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem;">
+            <input type="password" placeholder="Şifre" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem;">
+            <input type="password" placeholder="Şifre Tekrar" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem;">
+            <label style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1.5rem; cursor: pointer;">
+                <input type="checkbox" style="width: 20px; height: 20px; margin-top: 0.25rem;">
+                <span style="font-size: 0.875rem; color: #64748b;">Kullanım şartlarını ve gizlilik politikasını kabul ediyorum</span>
+            </label>
+            <button type="submit" style="width: 100%; background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer;">Kayıt Ol</button>
+        </form>
+    </div>
+</div>`,
+        css: `input:focus { border-color: #f093fb; }`,
+        js: `// Registration validation`
+    },
+    {
+        id: 52,
+        category: 'Authentication',
+        title: 'Password Reset',
+        html: `<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 2rem;">
+    <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 420px; width: 100%; text-align: center;">
+        <div style="width: 80px; height: 80px; background: #eff6ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">🔑</div>
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #1e293b;">Şifrenizi mi Unuttunuz?</h2>
+        <p style="color: #64748b; margin-bottom: 2rem;">E-posta adresinizi girin, size şifre sıfırlama bağlantısı gönderelim</p>
+        <form>
+            <input type="email" placeholder="E-posta adresiniz" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem;">
+            <button type="submit" style="width: 100%; background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 1rem;">Sıfırlama Bağlantısı Gönder</button>
+            <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 600; font-size: 0.875rem;">← Giriş sayfasına dön</a>
+        </form>
+    </div>
+</div>`,
+        css: `input:focus { border-color: #4facfe; }`,
+        js: `// Password reset email`
+    },
+    {
+        id: 53,
+        category: 'Authentication',
+        title: 'Two-Factor Authentication',
+        html: `<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 2rem;">
+    <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 420px; width: 100%; text-align: center;">
+        <div style="width: 80px; height: 80px; background: #ecfdf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2.5rem;">🛡️</div>
+        <h2 style="font-size: 2rem; margin-bottom: 0.5rem; color: #1e293b;">İki Faktörlü Doğrulama</h2>
+        <p style="color: #64748b; margin-bottom: 2rem;">Telefonunuza gönderilen 6 haneli kodu girin</p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2rem;">
+            <input type="text" maxlength="1" style="width: 56px; height: 56px; text-align: center; font-size: 1.5rem; font-weight: bold; border: 2px solid #e5e7eb; border-radius: 10px;">
+            <input type="text" maxlength="1" style="width: 56px; height: 56px; text-align: center; font-size: 1.5rem; font-weight: bold; border: 2px solid #e5e7eb; border-radius: 10px;">
+            <input type="text" maxlength="1" style="width: 56px; height: 56px; text-align: center; font-size: 1.5rem; font-weight: bold; border: 2px solid #e5e7eb; border-radius: 10px;">
+            <input type="text" maxlength="1" style="width: 56px; height: 56px; text-align: center; font-size: 1.5rem; font-weight: bold; border: 2px solid #e5e7eb; border-radius: 10px;">
+            <input type="text" maxlength="1" style="width: 56px; height: 56px; text-align: center; font-size: 1.5rem; font-weight: bold; border: 2px solid #e5e7eb; border-radius: 10px;">
+            <input type="text" maxlength="1" style="width: 56px; height: 56px; text-align: center; font-size: 1.5rem; font-weight: bold; border: 2px solid #e5e7eb; border-radius: 10px;">
+        </div>
+        <button style="width: 100%; background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-bottom: 1rem;">Doğrula</button>
+        <p style="color: #64748b; font-size: 0.875rem;">Kod almadınız mı? <a href="#" style="color: #10b981; text-decoration: none; font-weight: 600;">Tekrar gönder</a></p>
+    </div>
+</div>`,
+        css: `input:focus { border-color: #10b981; }`,
+        js: `// Auto-focus next input on digit entry`
+    },
+    {
+        id: 54,
+        category: 'Authentication',
+        title: 'Social Login',
+        html: `<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #fa709a, #fee140); padding: 2rem;">
+    <div style="background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 420px; width: 100%;">
+        <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #1e293b; text-align: center;">Hızlı Giriş</h2>
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <button style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%; background: white; border: 2px solid #e5e7eb; padding: 1rem; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">
+                <span style="font-size: 1.5rem;">🔍</span>
+                Google ile devam et
+            </button>
+            <button style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%; background: #1877f2; color: white; border: none; padding: 1rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+                <span style="font-size: 1.5rem;">📘</span>
+                Facebook ile devam et
+            </button>
+            <button style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%; background: #1da1f2; color: white; border: none; padding: 1rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+                <span style="font-size: 1.5rem;">🐦</span>
+                Twitter ile devam et
+            </button>
+            <button style="display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%; background: #333; color: white; border: none; padding: 1rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+                <span style="font-size: 1.5rem;">🐙</span>
+                GitHub ile devam et
+            </button>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <div style="flex: 1; height: 1px; background: #e5e7eb;"></div>
+            <span style="color: #9ca3af; font-size: 0.875rem;">VEYA</span>
+            <div style="flex: 1; height: 1px; background: #e5e7eb;"></div>
+        </div>
+        <input type="email" placeholder="E-posta" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; margin-bottom: 1rem;">
+        <input type="password" placeholder="Şifre" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem;">
+        <button style="width: 100%; background: linear-gradient(135deg, #fa709a, #fee140); color: white; padding: 1rem; border: none; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer;">Giriş Yap</button>
+    </div>
+</div>`,
+        css: `button:hover { transform: translateY(-2px); }`,
+        js: `// OAuth integration`
+    },
+
+    // ===== YENİ KATEGORİ: DASHBOARD =====
+    {
+        id: 55,
+        category: 'Dashboard',
+        title: 'Analytics Dashboard',
+        html: `<div style="background: #f8fafc; padding: 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
+        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Toplam Gelir</p>
+                    <h3 style="font-size: 1.75rem; font-weight: 700;">₺124,563</h3>
+                    <p style="color: #10b981; font-size: 0.875rem; margin-top: 0.5rem;">↑ 12.5%</p>
+                </div>
+                <div style="width: 48px; height: 48px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">💰</div>
+            </div>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Yeni Müşteriler</p>
+                    <h3 style="font-size: 1.75rem; font-weight: 700;">1,245</h3>
+                    <p style="color: #10b981; font-size: 0.875rem; margin-top: 0.5rem;">↑ 8.2%</p>
+                </div>
+                <div style="width: 48px; height: 48px; background: #ecfdf5; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👥</div>
+            </div>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Siparişler</p>
+                    <h3 style="font-size: 1.75rem; font-weight: 700;">892</h3>
+                    <p style="color: #ef4444; font-size: 0.875rem; margin-top: 0.5rem;">↓ 3.1%</p>
+                </div>
+                <div style="width: 48px; height: 48px; background: #fef3c7; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📦</div>
+            </div>
+        </div>
+        <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Dönüşüm Oranı</p>
+                    <h3 style="font-size: 1.75rem; font-weight: 700;">4.8%</h3>
+                    <p style="color: #10b981; font-size: 0.875rem; margin-top: 0.5rem;">↑ 1.2%</p>
+                </div>
+                <div style="width: 48px; height: 48px; background: #f3e8ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📊</div>
+            </div>
+        </div>
+    </div>
+    <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Satış Grafiği</h3>
+        <div style="height: 200px; background: linear-gradient(to top, #eff6ff, transparent); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #64748b;">📈 Chart Placeholder</div>
+    </div>
+</div>`,
+        css: `.dashboard-card:hover { transform: translateY(-2px); }`,
+        js: `// Chart.js integration`
+    },
+    {
+        id: 56,
+        category: 'Dashboard',
+        title: 'Recent Activity Widget',
+        html: `<div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 400px; margin: 2rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h3 style="font-size: 1.125rem; font-weight: 700;">Son Aktiviteler</h3>
+        <button style="color: #3b82f6; background: none; border: none; font-size: 0.875rem; cursor: pointer; font-weight: 600;">Tümünü Gör</button>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+            <div style="width: 40px; height: 40px; background: #eff6ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">💳</div>
+            <div style="flex: 1;">
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Yeni ödeme alındı</p>
+                <p style="color: #64748b; font-size: 0.875rem;">₺2,450 tutarında ödeme</p>
+                <p style="color: #9ca3af; font-size: 0.75rem; margin-top: 0.25rem;">5 dakika önce</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+            <div style="width: 40px; height: 40px; background: #ecfdf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">👤</div>
+            <div style="flex: 1;">
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Yeni kullanıcı kaydı</p>
+                <p style="color: #64748b; font-size: 0.875rem;">john@example.com</p>
+                <p style="color: #9ca3af; font-size: 0.75rem; margin-top: 0.25rem;">12 dakika önce</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+            <div style="width: 40px; height: 40px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">📦</div>
+            <div style="flex: 1;">
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Sipariş tamamlandı</p>
+                <p style="color: #64748b; font-size: 0.875rem;">Sipariş #12345</p>
+                <p style="color: #9ca3af; font-size: 0.75rem; margin-top: 0.25rem;">1 saat önce</p>
+            </div>
+        </div>
+    </div>
+</div>`,
+        css: `.activity-item:hover { background: #f1f5f9; }`,
+        js: `// Real-time activity updates`
+    },
+    {
+        id: 57,
+        category: 'Dashboard',
+        title: 'Quick Actions Panel',
+        html: `<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 600px; margin: 2rem;">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Hızlı Eylemler</h3>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 1.5rem 1rem; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; transition: all 0.3s;">
+            <span style="font-size: 2rem;">➕</span>
+            <span style="font-weight: 600;">Yeni Ürün</span>
+        </button>
+        <button style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; border: none; padding: 1.5rem 1rem; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 2rem;">📧</span>
+            <span style="font-weight: 600;">Mesaj Gönder</span>
+        </button>
+        <button style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; border: none; padding: 1.5rem 1rem; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 2rem;">📊</span>
+            <span style="font-weight: 600;">Rapor Oluştur</span>
+        </button>
+        <button style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; border: none; padding: 1.5rem 1rem; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 2rem;">👥</span>
+            <span style="font-weight: 600;">Kullanıcı Ekle</span>
+        </button>
+        <button style="background: linear-gradient(135deg, #fa709a, #fee140); color: white; border: none; padding: 1.5rem 1rem; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 2rem;">⚙️</span>
+            <span style="font-weight: 600;">Ayarlar</span>
+        </button>
+        <button style="background: linear-gradient(135deg, #a8edea, #fed6e3); color: #1e293b; border: none; padding: 1.5rem 1rem; border-radius: 12px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+            <span style="font-size: 2rem;">📁</span>
+            <span style="font-weight: 600;">Dosyalar</span>
+        </button>
+    </div>
+</div>`,
+        css: `.action-btn:hover { transform: translateY(-4px); }`,
+        js: `// Quick action handlers`
+    },
+    {
+        id: 58,
+        category: 'Dashboard',
+        title: 'User Statistics',
+        html: `<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 500px; margin: 2rem;">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Kullanıcı İstatistikleri</h3>
+    <div style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span style="color: #64748b; font-size: 0.875rem;">Aktif Kullanıcılar</span>
+            <span style="font-weight: 600;">78%</span>
+        </div>
+        <div style="background: #e5e7eb; height: 12px; border-radius: 6px; overflow: hidden;">
+            <div style="background: linear-gradient(to right, #667eea, #764ba2); height: 100%; width: 78%; border-radius: 6px;"></div>
+        </div>
+    </div>
+    <div style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span style="color: #64748b; font-size: 0.875rem;">Dönüşüm Oranı</span>
+            <span style="font-weight: 600;">62%</span>
+        </div>
+        <div style="background: #e5e7eb; height: 12px; border-radius: 6px; overflow: hidden;">
+            <div style="background: linear-gradient(to right, #4facfe, #00f2fe); height: 100%; width: 62%; border-radius: 6px;"></div>
+        </div>
+    </div>
+    <div style="margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span style="color: #64748b; font-size: 0.875rem;">Geri Dönüş Oranı</span>
+            <span style="font-weight: 600;">45%</span>
+        </div>
+        <div style="background: #e5e7eb; height: 12px; border-radius: 6px; overflow: hidden;">
+            <div style="background: linear-gradient(to right, #43e97b, #38f9d7); height: 100%; width: 45%; border-radius: 6px;"></div>
+        </div>
+    </div>
+    <div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
+            <span style="color: #64748b; font-size: 0.875rem;">Memnuniyet</span>
+            <span style="font-weight: 600;">91%</span>
+        </div>
+        <div style="background: #e5e7eb; height: 12px; border-radius: 6px; overflow: hidden;">
+            <div style="background: linear-gradient(to right, #f093fb, #f5576c); height: 100%; width: 91%; border-radius: 6px;"></div>
+        </div>
+    </div>
+</div>`,
+        css: `.progress-bar { transition: width 1s ease; }`,
+        js: `// Animated progress bars`
+    },
+    {
+        id: 59,
+        category: 'Dashboard',
+        title: 'Sales Chart Widget',
+        html: `<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin: 2rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Satış Trendi</h3>
+            <p style="color: #64748b; font-size: 0.875rem;">Son 7 gün</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+            <button style="background: #eff6ff; color: #3b82f6; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.875rem;">Gün</button>
+            <button style="background: white; color: #64748b; border: 1px solid #e5e7eb; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.875rem;">Hafta</button>
+            <button style="background: white; color: #64748b; border: 1px solid #e5e7eb; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.875rem;">Ay</button>
+        </div>
+    </div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-around; height: 200px; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 8px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 120px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Pzt</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 150px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Sal</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 90px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Çar</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 140px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Per</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 180px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Cum</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 100px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Cmt</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+            <div style="background: linear-gradient(to top, #667eea, #764ba2); width: 40px; height: 80px; border-radius: 6px;"></div>
+            <span style="font-size: 0.75rem; color: #64748b;">Paz</span>
+        </div>
+    </div>
+</div>`,
+        css: `.chart-bar:hover { opacity: 0.8; }`,
+        js: `// Bar chart animation`
+    },
+
+    // ===== YENİ KATEGORİ: E-COMMERCE =====
+    {
+        id: 60,
+        category: 'E-commerce',
+        title: 'Product Grid',
+        html: `<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding: 2rem; background: #f8fafc;">
+    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s;">
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 220px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📱</div>
+        <div style="padding: 1.25rem;">
+            <span style="background: #eff6ff; color: #3b82f6; padding: 0.25rem 0.625rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Elektronik</span>
+            <h4 style="margin: 0.75rem 0 0.5rem; font-size: 1.125rem;">Premium Akıllı Telefon</h4>
+            <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">En son teknoloji özellikleriyle donatılmış</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">₺12,999</span>
+                <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1.25rem; border-radius: 8px; cursor: pointer; font-weight: 600;">Sepete Ekle</button>
+            </div>
+        </div>
+    </div>
+    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="background: linear-gradient(135deg, #f093fb, #f5576c); height: 220px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">⌚</div>
+        <div style="padding: 1.25rem;">
+            <span style="background: #fef3c7; color: #f59e0b; padding: 0.25rem 0.625rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600;">Aksesuar</span>
+            <h4 style="margin: 0.75rem 0 0.5rem; font-size: 1.125rem;">Akıllı Saat Pro</h4>
+            <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">Sağlık takibi ve bildirimler</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">₺3,499</span>
+                <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1.25rem; border-radius: 8px; cursor: pointer; font-weight: 600;">Sepete Ekle</button>
+            </div>
+        </div>
+    </div>
+</div>`,
+        css: `.product-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }`,
+        js: `// Add to cart functionality`
+    },
+    {
+        id: 61,
+        category: 'E-commerce',
+        title: 'Shopping Cart',
+        html: `<div style="max-width: 900px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Alışveriş Sepeti (3 ürün)</h2>
+    <div style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; margin-bottom: 2rem;">
+        <div style="display: flex; gap: 1.5rem; padding: 1.5rem; border-bottom: 1px solid #e5e7eb;">
+            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2rem; flex-shrink: 0;">📱</div>
+            <div style="flex: 1;">
+                <h4 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Premium Akıllı Telefon</h4>
+                <p style="color: #64748b; font-size: 0.875rem;">Siyah, 256GB</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <select style="padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 6px;">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <span style="font-size: 1.25rem; font-weight: 700; min-width: 120px; text-align: right;">₺12,999</span>
+                <button style="color: #ef4444; background: none; border: none; cursor: pointer; font-size: 1.25rem;">🗑️</button>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; padding: 1.5rem; background: #f8fafc; border-radius: 12px; margin-bottom: 1.5rem;">
+        <span style="font-size: 1.125rem; font-weight: 600;">Toplam</span>
+        <span style="font-size: 1.5rem; font-weight: 700; color: #3b82f6;">₺18,497</span>
+    </div>
+    <button style="width: 100%; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 1.25rem; border-radius: 12px; font-size: 1.125rem; font-weight: 700; cursor: pointer;">Ödemeye Geç →</button>
+</div>`,
+        css: `.cart-item:hover { background: #f9fafb; }`,
+        js: `// Cart management`
+    },
+    {
+        id: 62,
+        category: 'E-commerce',
+        title: 'Checkout Form',
+        html: `<div style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">Ödeme Bilgileri</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+        <input type="text" placeholder="Ad" style="padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+        <input type="text" placeholder="Soyad" style="padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+    </div>
+    <input type="email" placeholder="E-posta" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem;">
+    <input type="text" placeholder="Teslimat Adresi" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem;">
+    <input type="text" placeholder="Kart Numarası" style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; margin-bottom: 1.5rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+        <input type="text" placeholder="AA/YY" style="padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+        <input type="text" placeholder="CVV" style="padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+    </div>
+    <button style="width: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 1.25rem; border-radius: 12px; font-size: 1.125rem; font-weight: 700; cursor: pointer;">₺18,497 Öde</button>
+</div>`,
+        css: `input:focus { border-color: #10b981; }`,
+        js: `// Payment processing`
+    },
+    {
+        id: 63,
+        category: 'E-commerce',
+        title: 'Product Detail',
+        html: `<div style="max-width: 1200px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+    <div>
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 500px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem; margin-bottom: 1rem;">📱</div>
+        <div style="display: flex; gap: 1rem;">
+            <div style="width: 80px; height: 80px; background: #f3f4f6; opacityç: 0.6; border-radius: 8px; border: 2px solid #3b82f6;"></div>
+            <div style="width; 80px; height: 80px; background: #f3f4f6; border-radius: 8px;"></div>
+            <div style="width: 80px; height: 80px; background: #f3f4f6; border-radius: 8px;"></div>
+        </div>
+    </div>
+    <div>
+        <span style="background: #eff6ff; color: #3b82f6; padding: 0.375rem 0.875rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">YENİ</span>
+        <h1 style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">Premium Akıllı Telefon</h1>
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <span style="color: #f59e0b;">⭐⭐⭐⭐⭐</span>
+            <span style="color: #64748b; font-size: 0.875rem;">(124 değerlendirme)</span>
+        </div>
+        <p style="color: #64748b; line-height: 1.8; margin-bottom: 2rem;">En son teknoloji ile donatılmış premium akıllı telefon. Yüksek performans işlemci, muhteşem kamera sistemi ve uzun pil ömrü.</p>
+        <div style="font-size: 3rem; font-weight: 800; color: #3b82f6; margin-bottom: 2rem;">₺12,999</div>
+        <div style="margin-bottom: 2rem;">
+            <label style="display: block; margin-bottom: 0.75rem; font-weight: 600;">Renk</label>
+            <div style="display: flex; gap: 0.75rem;">
+                <button style="width: 48px; height: 48px; background: #000; border: 3px solid #3b82f6; border-radius: 50%; cursor: pointer;"></button>
+                <button style="width: 48px; height: 48px; background: #fff; border: 2px solid #e5e7eb; border-radius: 50%; cursor: pointer;"></button>
+                <button style="width: 48px; height: 48px; background: #3b82f6; border: 2px solid #e5e7eb; border-radius: 50%; cursor: pointer;"></button>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <button style="flex: 1; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 1.25rem; border-radius: 12px; font-size: 1.125rem; font-weight: 700; cursor: pointer;">Sepete Ekle</button>
+            <button style="width: 64px; background: white; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1.5rem; cursor: pointer;">❤️</button>
+        </div>
+    </div>
+</div>`,
+        css: `.color-option:hover { transform: scale(1.1); }`,
+        js: `// Product selection`
+    },
+    {
+        id: 64,
+        category: 'E-commerce',
+        title: 'Wishlist',
+        html: `<div style="max-width: 1000px; margin: 2rem auto; padding: 2rem;">
+    <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 2rem;">İstek Listem (5 ürün)</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+        <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: relative;">
+            <button style="position: absolute; top: 1rem; right: 1rem; background: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 10;">❤️</button>
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📱</div>
+            <div style="padding: 1.25rem;">
+                <h4 style="margin-bottom: 0.5rem;">Premium Akıllı Telefon</h4>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">Siyah, 256GB</p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-size: 1.25rem; font-weight: 700;">₺12,999</span>
+                    <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.875rem;">Sepete Ekle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`,
+        css: `.wishlist-item:hover .remove-btn { opacity: 1; }`,
+        js: `// Wishlist management`
+    },
+
+    // ===== YENİ KATEGORİ: SOCIAL =====
+    {
+        id: 65,
+        category: 'Social',
+        title: 'Social Post Card',
+        html: `<div style="max-width: 600px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 1.5rem;">
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.125rem;">JD</div>
+        <div style="flex: 1;">
+            <h4 style="font-weight: 700; margin-bottom: 0.125rem;">John Doe</h4>
+            <p style="color: #9ca3af; font-size: 0.875rem;">2 saat önce</p>
+        </div>
+        <button style="background: none; border: none; color: #9ca3af; cursor: pointer; font-size: 1.5rem;">⋯</button>
+    </div>
+    <p style="line-height: 1.6; margin-bottom: 1.5rem; color: #1e293b;">Bugün harika bir gün geçirdim! Yeni projemizi tamamladık ve sonuçlar muhteşem oldu 🚀</p>
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 300px; border-radius: 12px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">📸</div>
+    <div style="display: flex; gap: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+        <button style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; color: #64748b; cursor: pointer; font-weight: 600;">
+            <span style="font-size: 1.25rem;">❤️</span> 124 Beğeni
+        </button>
+        <button style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; color: #64748b; cursor: pointer; font-weight: 600;">
+            <span style="font-size: 1.25rem;">💬</span> 32 Yorum
+        </button>
+        <button style="display: flex; align-items: center; gap: 0.5rem; background: none; border: none; color: #64748b; cursor: pointer; font-weight: 600;">
+            <span style="font-size: 1.25rem;">🔄</span> Paylaş
+        </button>
+    </div>
+</div>`,
+        css: `.post-action:hover { color: #3b82f6; }`,
+        js: `// Social interactions`
+    },
+    {
+        id: 66,
+        category: 'Social',
+        title: 'Comment Section',
+        html: `<div style="max-width: 700px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 2rem;">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Yorumlar (24)</h3>
+    <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; flex-shrink: 0;"></div>
+        <div style="flex: 1;">
+            <input type="text" placeholder="Yorum ekle..." style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 1rem;">
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="display: flex; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: #f3e8ff; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #a855f7;">AS</div>
+            <div style="flex: 1;">
+                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px;">
+                    <h5 style="font-weight: 700; margin-bottom: 0.5rem;">Alice Smith</h5>
+                    <p style="color: #64748b; line-height: 1.6;">Harika bir paylaşım! Çok beğendim 👍</p>
+                </div>
+                <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem; font-size: 0.875rem; color: #9ca3af;">
+                    <button style="background: none; border: none; color: #9ca3af; cursor: pointer;">Beğen</button>
+                    <button style="background: none; border: none; color: #9ca3af; cursor: pointer;">Yanıtla</button>
+                    <span>2 dakika önce</span>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: #dbeafe; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #3b82f6;">BK</div>
+            <div style="flex: 1;">
+                <div style="background: #f8fafc; padding: 1rem; border-radius: 12px;">
+                    <h5 style="font-weight: 700; margin-bottom: 0.5rem;">Bob Klein</h5>
+                    <p style="color: #64748b; line-height: 1.6;">Tebrikler! Başarılarınızın devamını dilerim.</p>
+                </div>
+                <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem; font-size: 0.875rem; color: #9ca3af;">
+                    <button style="background: none; border: none; color: #9ca3af; cursor: pointer;">Beğen</button>
+                    <button style="background: none; border: none; color: #9ca3af; cursor: pointer;">Yanıtla</button>
+                    <span>15 dakika önce</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`,
+        css: `.comment:hover { background: #f9fafb; }`,
+        js: `// Comment management`
+    },
+    {
+        id: 67,
+        category: 'Social',
+        title: 'User Profile Card',
+        html: `<div style="max-width: 400px; margin: 2rem auto; background: white; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); overflow: hidden;">
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 150px;"></div>
+    <div style="padding: 0 2rem 2rem; margin-top: -60px; text-align: center;">
+        <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; border: 6px solid white; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">👤</div>
+        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">John Doe</h3>
+        <p style="color: #64748b; margin-bottom: 1rem;">@johndoe</p>
+        <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">UI/UX Designer | Coffee Lover ☕ | Tech Enthusiast 🚀</p>
+        <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; padding: 1rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+            <div style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">2.5K</div>
+                <div style="color: #9ca3af; font-size: 0.875rem;">Takipçi</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">364</div>
+                <div style="color: #9ca3af; font-size: 0.875rem;">Takip</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 1.5rem; font-weight: 700; color: #1e293b;">142</div>
+                <div style="color: #9ca3af; font-size: 0.875rem;">Gönderi</div>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <button style="flex: 1; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.875rem; border-radius: 10px; font-weight: 600; cursor: pointer;">Takip Et</button>
+            <button style="flex: 1; background: white; color: #667eea; border: 2px solid #667eea; padding: 0.875rem; border-radius: 10px; font-weight: 600; cursor: pointer;">Mesaj Gönder</button>
+        </div>
+    </div>
+</div>`,
+        css: `.profile-btn:hover { transform: scale(1.02); }`,
+        js: `// Profile interactions`
+    },
+    {
+        id: 68,
+        category: 'Social',
+        title: 'Follow Button',
+        html: `<div style="display: flex; flex-direction: column; gap: 1rem; max-width: 300px; margin: 2rem auto;">
+    <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.3s;">
+        <span style="font-size: 1.25rem;">➕</span>
+        Takip Et
+    </button>
+    <button style="background: white; color: #667eea; border: 2px solid #667eea; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+        <span style="font-size: 1.25rem;">✓</span>
+        Takip Ediliyor
+    </button>
+    <button style="background: #f3f4f6; color: #64748b; border: none; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.75rem;">
+        <span style="font-size: 1.25rem;">🔔</span>
+        Bildirimleri Aç
+    </button>
+</div>`,
+        css: `.follow-btn:hover { transform: translateY(-2px); }`,
+        js: `// Follow/unfollow toggle`
+    },
+    {
+        id: 69,
+        category: 'Social',
+        title: 'User List',
+        html: `<div style="max-width: 500px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 1.5rem;">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Önerilen Kullanıcılar</h3>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 12px; transition: all 0.3s;">
+            <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.25rem;">JD</div>
+            <div style="flex: 1;">
+                <h4 style="font-weight: 700; margin-bottom: 0.25rem;">Jane Doe</h4>
+                <p style="color: #9ca3af; font-size: 0.875rem;">@janedoe • 2.1K takipçi</p>
+            </div>
+            <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Takip Et</button>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 12px;">
+            <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.25rem;">MJ</div>
+            <div style="flex: 1;">
+                <h4 style="font-weight: 700; margin-bottom: 0.25rem;">Mike Johnson</h4>
+                <p style="color: #9ca3af; font-size: 0.875rem;">@mikej • 987 takipçi</p>
+            </div>
+            <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Takip Et</button>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: 12px;">
+            <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.25rem;">SK</div>
+            <div style="flex: 1;">
+                <h4 style="font-weight: 700; margin-bottom: 0.25rem;">Sarah Klein</h4>
+                <p style="color: #9ca3af; font-size: 0.875rem;">@sarahk • 3.4K takipçi</p>
+            </div>
+            <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Takip Et</button>
+        </div>
+    </div>
+</div>`,
+        css: `.user-item:hover { background: #f9fafb; }`,
+        js: `// User list management`
+    },
+
+    // ===== YENİ KATEGORİ: ACCORDION =====
+    {
+        id: 70,
+        category: 'Accordion',
+        title: 'Basic Accordion',
+        html: `<div style="max-width: 700px; margin: 2rem auto;">
+    <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+        <div style="border-bottom: 1px solid #e5e7eb;">
+            <button style="width: 100%; padding: 1.5rem; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.125rem; font-weight: 600; text-align: left;">
+                <span>Hizmetleriniz nelerdir?</span>
+                <span style="font-size: 1.5rem;">▼</span>
+            </button>
+            <div style="padding: 0 1.5rem 1.5rem; color: #64748b; line-height: 1.6;">
+               Web tasarım, mobil uygulama geliştirme ve dijital pazarlama hizmetleri sunuyoruz.
+            </div>
+        </div>
+        <div style="border-bottom: 1px solid #e5e7eb;">
+            <button style="width: 100%; padding: 1.5rem; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.125rem; font-weight: 600; text-align: left;">
+                <span>Fiyatlandırmanız nasıl?</span>
+                <span style="font-size: 1.5rem;">▼</span>
+            </button>
+        </div>
+        <div>
+            <button style="width: 100%; padding: 1.5rem; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.125rem; font-weight: 600; text-align: left;">
+                <span>İletişime nasıl geçebilirim?</span>
+                <span style="font-size: 1.5rem;">▼</span>
+            </button>
+        </div>
+    </div>
+</div>`,
+        css: `.accordion-btn:hover { background: #f9fafb; }`,
+        js: `// Accordion toggle logic`
+    },
+    {
+        id: 71,
+        category: 'Accordion',
+        title: 'FAQ Accordion',
+        html: `<div style="max-width: 800px; margin: 2rem auto; padding: 2rem;">
+    <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 3rem;">Sıkça Sorulan Sorular</h2>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden;">
+            <button style="width: 100%; padding: 1.5rem; background: #f8fafc; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.125rem; font-weight: 600; text-align: left;">
+                <span>💳 Ödeme yöntemleriniz neler?</span>
+                <span style="color: #3b82f6; font-size: 1.5rem;">+</span>
+            </button>
+        </div>
+        <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden;">
+            <button style="width: 100%; padding: 1.5rem; background: #f8fafc; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.125rem; font-weight: 600; text-align: left;">
+                <span>🚚 Kargo ne kadar sürer?</span>
+                <span style="color: #3b82f6; font-size: 1.5rem;">+</span>
+            </button>
+        </div>
+        <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden;">
+            <button style="width: 100%; padding: 1.5rem; background: #f8fafc; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 1.125rem; font-weight: 600; text-align: left;">
+                <span>↩️ İade politikanız nedir?</span>
+                <span style="color: #3b82f6; font-size: 1.5rem;">+</span>
+            </button>
+        </div>
+    </div>
+</div>`,
+        css: `.faq-item:hover { transform: translateY(-2px); }`,
+        js: `// FAQ accordion`
+    },
+    {
+        id: 72,
+        category: 'Accordion',
+        title: 'Nested Accordion',
+        html: `<div style="max-width: 700px; margin: 2rem auto; background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 1.5rem;">
+    <div style="margin-bottom: 1rem;">
+        <button style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600;">
+            <span>Kategori 1</span>
+            <span>▼</span>
+        </button>
+        <div style="padding: 1rem; background: #f8fafc; border-radius: 8px; margin-top: 0.5rem;">
+            <button style="width: 100%; padding: 0.875rem; background: white; border: 1px solid #e5e7eb; border-radius: 6px; display: flex; justify-content: space-between; margin-bottom: 0.5rem; cursor: pointer; font-weight: 600;">
+                <span>Alt Kategori 1.1</span>
+                <span>›</span>
+            </button>
+            <button style="width: 100%; padding: 0.875rem; background: white; border: 1px solid #e5e7eb; border-radius: 6px; display: flex; justify-content: space-between; cursor: pointer; font-weight: 600;">
+                <span>Alt Kategori 1.2</span>
+                <span>›</span>
+            </button>
+        </div>
+    </div>
+    <button style="width: 100%; padding: 1rem; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 600;">
+        <span>Kategori 2</span>
+        <span>▶</span>
+    </button>
+</div>`,
+        css: `.nested-accordion { transition: all 0.3s; }`,
+        js: `// Nested accordion logic`
+    },
+
+    // ===== YENİ KATEGORİ: BREADCRUMB =====
+    {
+        id: 73,
+        category: 'Breadcrumb',
+        title: 'Simple Breadcrumb',
+        html: `<div style="padding: 2rem;">
+    <nav style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem;">
+        <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Ana Sayfa</a>
+        <span style="color: #9ca3af;">/</span>
+        <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Ürünler</a>
+        <span style="color: #9ca3af;">/</span>
+        <a href="#" style="color: #3b82f6; text-decoration: none; font-weight: 500;">Elektronik</a>
+        <span style="color: #9ca3af;">/</span>
+        <span style="color: #64748b; font-weight: 600;">Telefon</span>
+    </nav>
+</div>`,
+        css: `nav a:hover { color: #2563eb; text-decoration: underline; }`,
+        js: `// Breadcrumb navigation`
+    },
+    {
+        id: 74,
+        category: 'Breadcrumb',
+        title: 'Icon Breadcrumb',
+        html: `<div style="padding: 2rem;">
+    <nav style="background: white; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="#" style="display: flex; align-items: center; gap: 0.5rem; color: #3b82f6; text-decoration: none; font-weight: 500;">
+            <span style="font-size: 1.125rem;">🏠</span>
+            Ana Sayfa
+        </a>
+        <span style="color: #9ca3af; font-size: 1.125rem;">→</span>
+        <a href="#" style="display: flex; align-items: center; gap: 0.5rem; color: #3b82f6; text-decoration: none; font-weight: 500;">
+            <span style="font-size: 1.125rem;">📦</span>
+            Ürünler
+        </a>
+        <span style="color: #9ca3af; font-size: 1.125rem;">→</span>
+        <span style="display: flex; align-items: center; gap: 0.5rem; color: #64748b; font-weight: 600;">
+            <span style="font-size: 1.125rem;">📱</span>
+            Telefon
+        </span>
+    </nav>
+</div>`,
+        css: `.breadcrumb-link:hover { color: #2563eb; }`,
+        js: `// Breadcrumb with icons`
+    },
+
+    // ===== YENİ KATEGORİ: PAGINATION =====
+    {
+        id: 75,
+        category: 'Pagination',
+        title: 'Basic Pagination',
+        html: `<div style="display: flex; justify-content: center; padding: 2rem;">
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; color: #9ca3af;">‹ Önceki</button>
+        <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; min-width: 48px;">1</button>
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; min-width: 48px;">2</button>
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; min-width: 48px;">3</button>
+        <span style="padding: 0 0.5rem; color: #9ca3af;">...</span>
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; min-width: 48px;">10</button>
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; color: #3b82f6;">Sonraki ›</button>
+    </div>
+</div>`,
+        css: `.page-btn:hover { background: #f3f4f6; }`,
+        js: `// Pagination logic`
+    },
+    {
+        id: 76,
+        category: 'Pagination',
+        title: 'Advanced Pagination',
+        html: `<div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; max-width: 900px; margin: 2rem auto;">
+    <div style="color: #64748b; font-size: 0.875rem;">
+        Toplam <strong>245</strong> sonuçtan <strong>1-10</strong> arası gösteriliyor
+    </div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button style="background: #f3f4f6; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600;">‹‹</button>
+        <button style="background: #f3f4f6; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600;">‹</button>
+        <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.5rem 0.875rem; border-radius: 6px; cursor: pointer; font-weight: 600;">1</button>
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.5rem 0.875rem; border-radius: 6px; cursor: pointer; font-weight: 600;">2</button>
+        <button style="background: white; border: 1px solid #e5e7eb; padding: 0.5rem 0.875rem; border-radius: 6px; cursor: pointer; font-weight: 600;">3</button>
+        <button style="background: #f3f4f6; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600;">›</button>
+        <button style="background: #f3f4f6; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600;">››</button>
+    </div>
+    <select style="padding: 0.5rem 1rem; border: 1px solid #e5e7eb; border-radius: 6px; cursor: pointer;">
+        <option>10 / sayfa</option>
+        <option>25 / sayfa</option>
+        <option>50 / sayfa</option>
+        <option>100 / sayfa</option>
+    </select>
+</div>`,
+        css: `.pagination-control:hover { background: #e5e7eb; }`,
+        js: `// Advanced pagination with page size`
+    },
+
+    // ===== YENİ KATEGORİ: TABLE =====
+    {
+        id: 77,
+        category: 'Table',
+        title: 'Data Table',
+        html: `<div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; margin: 2rem;">
+    <div style="padding: 1.5rem; border-bottom: 1px solid #e5e7eb;">
+        <h3 style="font-size: 1.25rem; font-weight: 700;">Kullanıcı Listesi</h3>
+    </div>
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background: #f8fafc;">
+                    <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem; border-bottom: 1px solid #e5e7eb;">AD</th>
+                    <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem; border-bottom: 1px solid #e5e7eb;">E-POSTA</th>
+                    <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem; border-bottom: 1px solid #e5e7eb;">ROL</th>
+                    <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem; border-bottom: 1px solid #e5e7eb;">DURUM</th>
+                    <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem; border-bottom: 1px solid #e5e7eb;">İŞLEM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #e5e7eb;">
+                    <td style="padding: 1rem 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+                            <strong>John Doe</strong>
+                        </div>
+                    </td>
+                    <td style="padding: 1rem 1.5rem; color: #64748b;">john@example.com</td>
+                    <td style="padding: 1rem 1.5rem;"><span style="background: #eff6ff; color: #3b82f6; padding: 0.375rem 0.75rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Admin</span></td>
+                    <td style="padding: 1rem 1.5rem;"><span style="background: #ecfdf5; color: #10b981; padding: 0.375rem 0.75rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Aktif</span></td>
+                    <td style="padding: 1rem 1.5rem;">
+                        <button style="background: none; border: none; color: #3b82f6; cursor: pointer; margin-right: 0.5rem;">✏️</button>
+                        <button style="background: none; border: none; color: #ef4444; cursor: pointer;">🗑️</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 1rem 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">AS</div>
+                            <strong>Alice Smith</strong>
+                        </div>
+                    </td>
+                    <td style="padding: 1rem 1.5rem; color: #64748b;">alice@example.com</td>
+                    <td style="padding: 1rem 1.5rem;"><span style="background: #fef3c7; color: #f59e0b; padding: 0.375rem 0.75rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Kullanıcı</span></td>
+                    <td style="padding: 1rem 1.5rem;"><span style="background: #ecfdf5; color: #10b981; padding: 0.375rem 0.75rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Aktif</span></td>
+                    <td style="padding: 1rem 1.5rem;">
+                        <button style="background: none; border: none; color: #3b82f6; cursor: pointer; margin-right: 0.5rem;">✏️</button>
+                        <button style="background: none; border: none; color: #ef4444; cursor: pointer;">🗑️</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>`,
+        css: `tbody tr:hover { background: #f9fafb; }`,
+        js: `// Table sorting and filtering`
+    },
+    {
+        id: 78,
+        category: 'Table',
+        title: 'Pricing Table',
+        html: `<div style="overflow-x: auto; padding: 2rem;">
+    <table style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; width: 100%; max-width: 900px; margin: 0 auto;">
+        <thead>
+            <tr style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+                <th style="padding: 1.5rem; text-align: left;">Özellik</th>
+                <th style="padding: 1.5rem; text-align: center;">Basic</th>
+                <th style="padding: 1.5rem; text-align: center;">Pro</th>
+                <th style="padding: 1.5rem; text-align: center;">Enterprise</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 1rem 1.5rem; font-weight: 600;">Fiyat</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">₺99/ay</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;"><strong style="color: #3b82f6; font-size: 1.125rem;">₺299/ay</strong></td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">₺999/ay</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 1rem 1.5rem;">Kullanıcı Sayısı</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">5</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">50</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">Sınırsız</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 1rem 1.5rem;">Depolama</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">10GB</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">100GB</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">1TB</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 1rem 1.5rem;">Destek</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">Email</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">Email + Chat</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">24/7 Öncelikli</td>
+            </tr>
+            <tr>
+                <td style="padding: 1rem 1.5rem;">API Erişimi</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">❌</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">✅</td>
+                <td style="padding: 1rem 1.5rem; text-align: center;">✅</td>
+            </tr>
+        </tbody>
+    </table>
+</div>`,
+        css: `tbody tr:hover { background: #f9fafb; }`,
+        js: `// Comparison table`
+    },
+    {
+        id: 79,
+        category: 'Table',
+        title: 'Sortable Table',
+        html: `<div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; margin: 2rem;">
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background: #f8fafc; border-bottom: 2px solid #e5e7eb;">
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        Ürün <span style="font-size: 0.75rem;">▲▼</span>
+                    </div>
+                </th>
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        Kategori <span style="font-size: 0.75rem;">▲▼</span>
+                    </div>
+                </th>
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        Fiyat <span style="font-size: 0.75rem;">▲▼</span>
+                    </div>
+                </th>
+                <th style="padding: 1rem 1.5rem; text-align: left; font-weight: 600; cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        Stok <span style="font-size: 0.75rem;">▲▼</span>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 1rem 1.5rem; font-weight: 600;">Premium Telefon</td>
+                <td style="padding: 1rem 1.5rem; color: #64748b;">Elektronik</td>
+                <td style="padding: 1rem 1.5rem; font-weight: 600;">₺12,999</td>
+                <td style="padding: 1rem 1.5rem;"><span style="background: #ecfdf5; color: #10b981; padding: 0.25rem 0.625rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Stokta</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+                <td style="padding: 1rem 1.5rem; font-weight: 600;">Akıllı Saat</td>
+                <td style="padding: 1rem 1.5rem; color: #64748b;">Aksesuar</td>
+                <td style="padding: 1rem 1.5rem; font-weight: 600;">₺3,499</td>
+                <td style="padding: 1rem 1.5rem;"><span style="background: #fef3c7; color: #f59e0b; padding: 0.25rem 0.625rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Az Stok</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>`,
+        css: `th:hover { background: #f1f5f9; }`,
+        js: `// Table sorting functionality`
+    },
+    {
+        id: 80,
+        category: 'Table',
+        title: 'Responsive Table',
+        html: `<div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 1.5rem; margin: 2rem;">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Siparişler</h3>
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; min-width: 600px; border-collapse: collapse;">
+            <thead>
+                <tr style="border-bottom: 2px solid #e5e7eb;">
+                    <th style="padding: 0.875rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem;">SİPARİŞ NO</th>
+                    <th style="padding: 0.875rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem;">MÜŞTERİ</th>
+                    <th style="padding: 0.875rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem;">TARİH</th>
+                    <th style="padding: 0.875rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem;">TUTAR</th>
+                    <th style="padding: 0.875rem; text-align: left; font-weight: 600; color: #64748b; font-size: 0.875rem;">DURUM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #e5e7eb;">
+                    <td style="padding: 0.875rem; font-weight: 600; color: #3b82f6;">#12345</td>
+                    <td style="padding: 0.875rem;">Ali Yılmaz</td>
+                    <td style="padding: 0.875rem; color: #64748b;">15 Şub 2026</td>
+                    <td style="padding: 0.875rem; font-weight: 600;">₺1,245</td>
+                    <td style="padding: 0.875rem;"><span style="background: #ecfdf5; color: #10b981; padding: 0.375rem 0.75rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Tamamlandı</span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.875rem; font-weight: 600; color: #3b82f6;">#12344</td>
+                    <td style="padding: 0.875rem;">Ayşe Demir</td>
+                    <td style="padding: 0.875rem; color: #64748b;">14 Şub 2026</td>
+                    <td style="padding: 0.875rem; font-weight: 600;">₺879</td>
+                    <td style="padding: 0.875rem;"><span style="background: #fef3c7; color: #f59e0b; padding: 0.375rem 0.75rem; border-radius: 12px; font-size: 0.875rem; font-weight: 600;">Beklemede</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>`,
+        css: `.responsive-table { overflow-x: auto; }`,
+        js: `// Responsive table wrapper`
+    },
+    {
+        id: 81,
+        category: 'Table',
+        title: 'Striped Table',
+        html: `<div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; margin: 2rem;">
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background: linear-gradient(135deg, #667eea, #764ba2); color: white;">
+                <th style="padding: 1.25rem 1.5rem; text-align: left; font-weight: 600;">Ürün</th>
+                <th style="padding: 1.25rem 1.5rem; text-align: left; font-weight: 600;">Miktar</th>
+                <th style="padding: 1.25rem 1.5rem; text-align: left; font-weight: 600;">Fiyat</th>
+                <th style="padding: 1.25rem 1.5rem; text-align: left; font-weight: 600;">Toplam</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #f9fafb;">
+                <td style="padding: 1rem 1.5rem;">Premium Telefon</td>
+                <td style="padding: 1rem 1.5rem;">1</td>
+                <td style="padding: 1rem 1.5rem;">₺12,999</td>
+                <td style="padding: 1rem 1.5rem; font-weight: 700;">₺12,999</td>
+            </tr>
+            <tr style="background: white;">
+                <td style="padding: 1rem 1.5rem;">Akıllı Saat</td>
+                <td style="padding: 1rem 1.5rem;">2</td>
+                <td style="padding: 1rem 1.5rem;">₺3,499</td>
+                <td style="padding: 1rem 1.5rem; font-weight: 700;">₺6,998</td>
+            </tr>
+            <tr style="background: #f9fafb;">
+                <td style="padding: 1rem 1.5rem;">Kulaklık</td>
+                <td style="padding: 1rem 1.5rem;">1</td>
+                <td style="padding: 1rem 1.5rem;">₺899</td>
+                <td style="padding: 1rem 1.5rem; font-weight: 700;">₺899</td>
+            </tr>
+            <tr style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); font-weight: 700; font-size: 1.125rem;">
+                <td colspan="3" style="padding: 1.25rem 1.5rem; text-align: right;">GENEL TOPLAM:</td>
+                <td style="padding: 1.25rem 1.5rem; color: #3b82f6;">₺20,896</td>
+            </tr>
+        </tbody>
+    </table>
+</div>`,
+        css: `tbody tr:nth-child(even) { background: #f9fafb; }`,
+        js: `// Striped table styling`
+    },
+
+    // ===== YENİ KATEGORİ: AVATAR =====
+    {
+        id: 82,
+        category: 'Avatar',
+        title: 'Avatar Group',
+        html: `<div style="padding: 2rem;">
+    <div style="display: flex; align-items: center;">
+        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; border: 3px solid white; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">JD</div>
+        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; border: 3px solid white; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">AS</div>
+        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; border: 3px solid white; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">MJ</div>
+        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; border: 3px solid white; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">SK</div>
+        <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; border: 3px solid white; margin-left: -12px; display: flex; align-items: center; justify-content: center; color: #64748b; font-weight: bold; font-size: 0.875rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">+12</div>
+    </div>
+</div>`,
+        css: `.avatar:hover { transform: translateY(-4px); z-index: 10; }`,
+        js: `// Avatar group display`
+    },
+    {
+        id: 83,
+        category: 'Avatar',
+        title: 'Avatar with Status',
+        html: `<div style="display: flex; gap: 2rem; padding: 2rem; flex-wrap: wrap;">
+    <div style="position: relative; width: 64px; height: 64px;">
+        <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">JD</div>
+        <div style="position: absolute; bottom: 2px; right: 2px; width: 18px; height: 18px; background: #10b981; border-radius: 50%; border: 3px solid white;"></div>
+    </div>
+    <div style="position: relative; width: 64px; height: 64px;">
+        <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">AS</div>
+        <div style="position: absolute; bottom: 2px; right: 2px; width: 18px; height: 18px; background: #f59e0b; border-radius: 50%; border: 3px solid white;"></div>
+    </div>
+    <div style="position: relative; width: 64px; height: 64px;">
+        <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">MJ</div>
+        <div style="position: absolute; bottom: 2px; right: 2px; width: 18px; height: 18px; background: #9ca3af; border-radius: 50%; border: 3px solid white;"></div>
+    </div>
+</div>`,
+        css: `.status-indicator { animation: pulse 2s infinite; }`,
+        js: `// Online status display`
+    },
+    {
+        id: 84,
+        category: 'Avatar',
+        title: 'Avatar Sizes',
+        html: `<div style="display: flex; align-items: end; gap: 1.5rem; padding: 2rem; flex-wrap: wrap;">
+    <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.75rem;">XS</div>
+    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.875rem;">S</div>
+    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1rem;">M</div>
+    <div style="width: 64px; height: 64px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.25rem;">L</div>
+    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem;">XL</div>
+    <div style="width: 96px; height: 96px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1e293b; font-weight: bold; font-size: 1.75rem;">2XL</div>
+</div>`,
+        css: `.avatar { transition: transform 0.3s; }`,
+        js: `// Different avatar sizes`
+    },
+
+    // NAVBAR EK BİLEŞENLER (2 TANE DAHA)
+    {
+        id: 85,
+        category: 'Navbar',
+        title: 'Mega Menu Navbar',
+        html: `<nav style="background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 1rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+        <div style="font-size: 1.5rem; font-weight: bold; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MegaMenu</div>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 600;">Ana Sayfa</a>
+            <div style="position: relative;">
+                <a href="#" style="color: #374151; text-decoration: none; font-weight: 600;">Ürünler ▾</a>
+                <div style="position: absolute; top: 100%; left: -300px; background: white; box-shadow: 0 12px 40px rgba(0,0,0,0.15); border-radius: 16px; margin-top: 1rem; padding: 2rem; display: none; width: 800px;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: #3b82f6;">Elektronik</h4>
+                            <a href="#" style="display: block; padding: 0.5rem 0; color: #64748b; text-decoration: none;">Telefonlar</a>
+                            <a href="#" style="display: block; padding: 0.5rem 0; color: #64748b; text-decoration: none;">Bilgisayarlar</a>
+                            <a href="#" style="display: block; padding: 0.5rem 0; color: #64748b; text-decoration: none;">Tabletler</a>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem; color: #3b82f6;">Aksesuar</h4>
+                            <a href="#" style="display: block; padding: 0.5rem 0; color: #64748b; text-decoration: none;">Kulaklıklar</a>
+                            <a href="#" style="display: block; padding: 0.5rem 0; color: #64748b; text-decoration: none;">Kılıflar</a>
+                            <a href="#" style="display: block; padding: 0.5rem 0; color: #64748b; text-decoration: none;">Şarj Cihazları</a>
+                        </div>
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 12px; padding: 1.5rem; color: white;">
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">Özel Teklifler</h4>
+                            <p style="font-size: 0.875rem; opacity: 0.9; margin-bottom: 1rem;">Tüm ürünlerde %30'a varan indirim</p>
+                            <button style="background: white; color: #667eea; border: none; padding: 0.625rem 1.25rem; border-radius: 6px; font-weight: 600; cursor: pointer;">Keşfet →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 600;">İletişim</a>
+        </div>
+    </div>
+</nav>`,
+        css: `.mega-menu:hover { display: block !important; }`,
+        js: `// Mega menu hover`
+    },
+    {
+        id: 86,
+        category: 'Navbar',
+        title: 'Sticky Navbar',
+        html: `<nav style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 1rem 2rem; position: sticky; top: 0; z-index: 100;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">🚀</div>
+            <div style="font-size: 1.5rem; font-weight: 800;">StickyNav</div>
+        </div>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 600; transition: color 0.3s;">Ana Sayfa</a>
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 600;">Özellikler</a>
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 600;">Hakkımızda</a>
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 600;">İletişim</a>
+            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.75rem 1.75rem; border-radius: 8px; font-weight: 700; cursor: pointer;">Başla</button>
+        </div>
+    </div>
+</nav>`,
+        css: `.sticky-nav { position: sticky; top: 0; }`,
+        js: `// Sticky navbar scroll behavior`
+    },
+
+    // HERO EK BİLEŞENLER (2 TANE DAHA)
+    {
+        id: 87,
+        category: 'Hero',
+        title: 'CTA Hero',
+        html: `<section style="background: linear-gradient(to bottom, #1e293b, #334155); color: white; padding: 6rem 2rem; text-align: center; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(102, 126, 234, 0.1), transparent 50%);"></div>
+    <div style="position: relative; z-index: 1; max-width: 900px; margin: 0 auto;">
+        <span style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.5rem 1.5rem; border-radius: 24px; font-size: 0.875rem; font-weight: 700; display: inline-block; margin-bottom: 2rem; border: 1px solid rgba(59, 130, 246, 0.3);">✨ YENİ SÜRÜM ÇIKTI</span>
+        <h1 style="font-size: 4rem; font-weight: 900; margin-bottom: 1.5rem; line-height: 1.1;">Dijital Geleceği<br/>Birlikte İnşa Edelim</h1>
+        <p style="font-size: 1.5rem; opacity: 0.9; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">Hayallerinizdeki projeyi gerçeğe dönüştürmek için gereken tüm araçlar burada.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <button style="background: linear-gradient(135deg, #3b82f6, #6366f1); color: white; border: none; padding: 1.25rem 3rem; border-radius: 12px; font-size: 1.125rem; font-weight: 700; cursor: pointer; box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);">Ücretsiz Başla →</button>
+            <button style="background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3); padding: 1.25rem 3rem; border-radius: 12px; font-size: 1.125rem; font-weight: 700; cursor: pointer; backdrop-filter: blur(10px);">Demo İzle ▶</button>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div>
+                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">10K+</div>
+                <div style="opacity: 0.7;">Mutlu Kullanıcı</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">4.9★</div>
+                <div style="opacity: 0.7;">Kullanıcı Puanı</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">24/7</div>
+                <div style="opacity: 0.7;">Destek</div>
+            </div>
+        </div>
+    </div>
+</section>`,
+        css: `.cta-btn:hover { transform: translateY(-2px); }`,
+        js: `// CTA tracking`
+    },
+    {
+        id: 88,
+        category: 'Hero',
+        title: 'Split Hero',
+        html: `<section style="display: grid; grid-template-columns: 1fr 1fr; min-height: 600px;">
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 4rem; display: flex; flex-direction: column; justify-content: center; color: white;">
+        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; display: inline-block; width: fit-content; margin-bottom: 2rem;">🎉 Yeni Başlayanlar İçin</span>
+        <h1 style="font-size: 3rem; font-weight: 900; margin-bottom: 1.5rem; line-height: 1.2;">Başarıya Giden Yolda İlk Adım</h1>
+        <p style="font-size: 1.25rem; opacity: 0.95; margin-bottom: 2.5rem; line-height: 1.6;">Sıfırdan profesyonel projelere kadar her aşamada yanınızdayız.</p>
+        <div style="display: flex; gap: 1rem;">
+            <button style="background: white; color: #667eea; border: none; padding: 1rem 2.5rem; border-radius: 10px; font-weight: 700; font-size: 1.125rem; cursor: pointer;">Hemen Başla</button>
+            <button style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white; padding: 1rem 2.5rem; border-radius: 10px; font-weight: 700; font-size: 1.125rem; cursor: pointer;">Daha Fazla</button>
+        </div>
+        <div style="display: flex; gap: 1.5rem; margin-top: 3rem;">
+            <div>
+                <div style="font-size: 2rem; font-weight: 800;">5000+</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Aktif Kullanıcı</div>
+            </div>
+            <div>
+                <div style="font-size: 2rem; font-weight: 800;">98%</div>
+                <div style="opacity: 0.9; font-size: 0.875rem;">Memnuniyet</div>
+            </div>
+        </div>
+    </div>
+    <div style="background: #1e293b; display: flex; align-items: center; justify-content: center; font-size: 6rem; color: rgba(255,255,255,0.1);">
+        🚀
+    </div>
+</section>`,
+        css: `.split-hero-btn:hover { transform: scale(1.05); }`,
+        js: `// Split hero interactions`
+    },
+
+    // YENİ KATEGORİ: NOTIFICATION, SLIDER, VIDEO (Kalan componentler)
+    {
+        id: 89,
+        category: 'Notification',
+        title: 'Toast Notification',
+        html: `<div style="position: fixed; top: 2rem; right: 2rem; display: flex; flex-direction: column; gap: 1rem; z-index: 1000;">
+    <div style="background: white; padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 1rem; min-width: 350px; border-left: 4px solid #10b981;">
+        <span style="font-size: 1.5rem;">✅</span>
+        <div style="flex: 1;">
+            <h4 style="font-weight: 700; margin-bottom: 0.25rem;">Başarılı!</h4>
+            <p style="color: #64748b; font-size: 0.875rem;">İşleminiz başarıyla tamamlandı.</p>
+        </div>
+        <button style="background: none; border: none; color: #9ca3af; cursor: pointer; font-size: 1.25rem;">×</button>
+    </div>
+    <div style="background: white; padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 1rem; min-width: 350px; border-left: 4px solid #ef4444;">
+        <span style="font-size: 1.5rem;">❌</span>
+        <div style="flex: 1;">
+            <h4 style="font-weight: 700; margin-bottom: 0.25rem;">Hata!</h4>
+            <p style="color: #64748b; font-size: 0.875rem;">Bir şeyler yanlış gitti.</p>
+        </div>
+        <button style="background: none; border: none; color: #9ca3af; cursor: pointer; font-size: 1.25rem;">×</button>
+    </div>
+    <div style="background: white; padding: 1.25rem 1.5rem; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 1rem; min-width: 350px; border-left: 4px solid #3b82f6;">
+        <span style="font-size: 1.5rem;">ℹ️</span>
+        <div style="flex: 1;">
+            <h4 style="font-weight: 700; margin-bottom: 0.25rem;">Bilgi</h4>
+            <p style="color: #64748b; font-size: 0.875rem;">Yeni güncelleme mevcut.</p>
+        </div>
+        <button style="background: none; border: none; color: #9ca3af; cursor: pointer; font-size: 1.25rem;">×</button>
+    </div>
+</div>`,
+        css: `@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }`,
+        js: `// Toast notification system`
+    },
+    {
+        id: 90,
+        category: 'Notification',
+        title: 'Notification Badge',
+        html: `<div style="display: flex; gap: 2rem; padding: 2rem; flex-wrap: wrap;">
+    <button style="position: relative; background: white; border: 2px solid #e5e7eb; padding: 0.875rem 1.5rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+        Mesajlar
+        <span style="position: absolute; top: -8px; right: -8px; background: #ef4444; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">5</span>
+    </button>
+    <button style="position: relative; background: white; border: 2px solid #e5e7eb; padding: 0.875rem 1.5rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+        Bildirimler
+        <span style="position: absolute; top: -8px; right: -8px; background: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">12</span>
+    </button>
+    <button style="position: relative; background: white; border: 2px solid #e5e7eb; padding: 0.875rem 1.5rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+        Sepet
+        <span style="position: absolute; top: -8px; right: -8px; background: #10b981; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700;">3</span>
+    </button>
+    <button style="position: relative; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; padding: 0.875rem 1.5rem; border-radius: 10px; cursor: pointer; font-weight: 600;">
+        Güncelleme
+        <span style="position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: #ef4444; border-radius: 50%; border: 2px solid white;"></span>
+    </button>
+</div>`,
+        css: `.notification-badge { animation: pulse 2s infinite; }`,
+        js: `// Badge counter`
+    },
+    {
+        id: 91,
+        category: 'Notification',
+        title: 'Notification Center',
+        html: `<div style="max-width: 400px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+    <div style="padding: 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-size: 1.25rem; font-weight: 700;">Bildirimler</h3>
+        <button style="color: #3b82f6; background: none; border: none; font-size: 0.875rem; font-weight: 600; cursor: pointer;">Tümünü Okundu İşaretle</button>
+    </div>
+    <div style="max-height: 400px; overflow-y: auto;">
+        <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem; background: #eff6ff;">
+            <div style="width: 48px; height: 48px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">💬</div>
+            <div style="flex: 1;">
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Yeni mesajınız var</p>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Ali Yılmaz size mesaj gönderdi</p>
+                <p style="color: #9ca3af; font-size: 0.75rem;">5 dakika önce</p>
+            </div>
+            <div style="width: 8px; height: 8px; background: #3b82f6; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+        </div>
+        <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid #e5e7eb; display: flex; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">✓</div>
+            <div style="flex: 1;">
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Siparişiniz onaylandı</p>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Sipariş #12345 hazırlanıyor</p>
+                <p style="color: #9ca3af; font-size: 0.75rem;">1 saat önce</p>
+            </div>
+        </div>
+        <div style="padding: 1.25rem 1.5rem; display: flex; gap: 1rem;">
+            <div style="width: 48px; height: 48px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">⚠️</div>
+            <div style="flex: 1;">
+                <p style="font-weight: 600; margin-bottom: 0.25rem;">Sistem güncellemesi</p>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.5rem;">Yeni özellikler eklendi</p>
+                <p style="color: #9ca3af; font-size: 0.75rem;">2 saat önce</p>
+            </div>
+        </div>
+    </div>
+</div>`,
+        css: `.notification-item:hover { background: #f9fafb; }`,
+        js: `// Notification center management`
+    },
+
+    {
+        id: 92,
+        category: 'Slider',
+        title: 'Image Slider',
+        html: `<div style="max-width: 800px; margin: 2rem auto; position: relative;">
+    <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 450px; display: flex; align-items: center; justify-content: center; color: white; font-size: 5rem;">🖼️</div>
+    </div>
+    <button style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.95); border: none; width: 56px; height: 56px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">‹</button>
+    <button style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.95); border: none; width: 56px; height: 56px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">›</button>
+    <div style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); display: flex; gap: 0.75rem;">
+        <div style="width: 12px; height: 12px; background: white; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>
+        <div style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%;"></div>
+        <div style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%;"></div>
+        <div style="width: 12px; height: 12px; background: rgba(255,255,255,0.5); border-radius: 50%;"></div>
+    </div>
+</div>`,
+        css: `.slider-btn:hover { transform: translateY(-50%) scale(1.1); }`,
+        js: `// Image slider navigation`
+    },
+    {
+        id: 93,
+        category: 'Slider',
+        title: 'Range Slider',
+        html: `<div style="max-width: 500px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div style="margin-bottom: 2rem;">
+        <label style="display: block; margin-bottom: 1rem; font-weight: 600; font-size: 1.125rem;">Fiyat Aralığı</label>
+        <div style="margin-bottom: 1rem;">
+            <input type="range" min="0" max="100" value="50" style="width: 100%; height: 8px; border-radius: 4px; background: linear-gradient(to right, #667eea 0%, #667eea 50%, #e5e7eb 50%, #e5e7eb 100%); outline: none; -webkit-appearance: none;">
+        </div>
+        <div style="display: flex; justify-content: space-between; color: #64748b; font-size: 0.875rem;">
+            <span>₺0</span>
+            <span style="color: #3b82f6; font-weight: 700;">₺50,000</span>
+            <span>₺100,000</span>
+        </div>
+    </div>
+    <div>
+        <label style="display: block; margin-bottom: 1rem; font-weight: 600; font-size: 1.125rem;">Hacim</label>
+        <div style="margin-bottom: 1rem;">
+            <input type="range" min="0" max="100" value="75" style="width: 100%; height: 8px; border-radius: 4px; background: linear-gradient(to right, #10b981 0%, #10b981 75%, #e5e7eb 75%, #e5e7eb 100%); outline: none; -webkit-appearance: none;">
+        </div>
+        <div style="display: flex; justify-content: space-between; color: #64748b; font-size: 0.875rem;">
+            <span>0%</span>
+            <span style="color: #10b981; font-weight: 700;">75%</span>
+            <span>100%</span>
+        </div>
+    </div>
+</div>`,
+        css: `input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; background: white; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.2); cursor: pointer; }`,
+        js: `// Range slider value update`
+    },
+    {
+        id: 94,
+        category: 'Slider',
+        title: 'Content Slider',
+        html: `<div style="max-width: 900px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 3rem; position: relative;">
+    <div style="display: flex; align-items: center; gap: 3rem;">
+        <div style="flex: 1;">
+            <span style="background: #eff6ff; color: #3b82f6; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 700; display: inline-block; margin-bottom: 1rem;">Müşteri Görüşleri</span>
+            <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3;">Harika bir deneyim yaşadık!</h2>
+            <p style="color: #64748b; line-height: 1.8; margin-bottom: 2rem;">Ekip son derece profesyonel ve işini bilen insanlardan oluşuyor. Projemizi zamanında ve beklentilerimizin üzerinde teslim ettiler.</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.25rem;">JD</div>
+                <div>
+                    <h4 style="font-weight: 700; margin-bottom: 0.25rem;">John Doe</h4>
+                    <p style="color: #9ca3af; font-size: 0.875rem;">CEO, TechCorp</p>
+                </div>
+            </div>
+        </div>
+        <div style="width: 300px; height: 300px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 16px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">💬</div>
+    </div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 2rem;">
+        <div style="width: 40px; height: 4px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 2px;"></div>
+        <div style="width: 40px; height: 4px; background: #e5e7eb; border-radius: 2px;"></div>
+        <div style="width: 40px; height: 4px; background: #e5e7eb; border-radius: 2px;"></div>
+    </div>
+</div>`,
+        css: `.content-slide { transition: transform 0.5s ease; }`,
+        js: `// Content slider navigation`
+    },
+
+    {
+        id: 95,
+        category: 'Video',
+        title: 'Video Player',
+        html: `<div style="max-width: 900px; margin: 2rem auto; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.15); position: relative;">
+    <div style="background: linear-gradient(135deg, #1e293b, #334155); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative;">
+        <div style="color: white; font-size: 6rem; opacity: 0.3;">🎬</div>
+        <button style="position: absolute; width: 80px; height: 80px; background: rgba(255,255,255,0.95); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3); backdrop-filter: blur(10px);">▶</button>
+    </div>
+    <div style="background: white; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: #64748b;">⏮️</button>
+            <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">⏸️</button>
+            <button style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: #64748b;">⏭️</button>
+            <span style="color: #64748b; font-size: 0.875rem; margin-left: 1rem;">2:34 / 5:12</span>
+        </div>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <button style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: #64748b;">🔊</button>
+            <button style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: #64748b;">⚙️</button>
+            <button style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: #64748b;">⛶</button>
+        </div>
+    </div>
+</div>`,
+        css: `.play-btn:hover { transform: scale(1.1); }`,
+        js: `// Video player controls`
+    },
+    {
+        id: 96,
+        category: 'Video',
+        title: 'Video Card',
+        html: `<div style="max-width: 400px; margin: 2rem auto; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden;">
+    <div style="position: relative;">
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">🎥</div>
+        <button style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; background: rgba(255,255,255,0.95); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">▶</button>
+        <span style="position: absolute; bottom: 1rem; right: 1rem; background: rgba(0,0,0,0.8); color: white; padding: 0.375rem 0.75rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; backdrop-filter: blur(10px);">12:34</span>
+    </div>
+    <div style="padding: 1.5rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+            <div>
+                <h4 style="font-weight: 700; font-size: 0.875rem; margin-bottom: 0.125rem;">John Doe</h4>
+                <p style="color: #9ca3af; font-size: 0.75rem;">124K abone</p>
+            </div>
+        </div>
+        <h3 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.4;">Web Tasarımında Modern Trendler 2026</h3>
+        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">2026 yılında öne çıkan web tasarım trendlerini keşfedin...</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+            <span style="color: #64748b; font-size: 0.875rem;">45K görüntülenme</span>
+            <span style="color: #9ca3af; font-size: 0.875rem;">2 gün önce</span>
+        </div>
+    </div>
+</div>`,
+        css: `.video-card:hover .play-btn { transform: translate(-50%, -50%) scale(1.1); }`,
+        js: `// Video card interaction`
+    },
+
+    // YENİ KATEGORİ: STEPPER, TAG (Son 4 component)
+    {
+        id: 97,
+        category: 'Stepper',
+        title: 'Horizontal Stepper',
+        html: `<div style="max-width: 800px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 3rem; position: relative;">
+        <div style="position: absolute; top: 24px; left: 80px; right: 80px; height: 4px; background: #e5e7eb; z-index: 1;">
+            <div style="height: 100%; width: 33%; background: linear-gradient(to right, #667eea, #764ba2);"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); margin-bottom: 0.75rem;">✓</div>
+            <span style="font-weight: 600; color: #1e293b;">Hesap</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.125rem; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4); margin-bottom: 0.75rem;">2</div>
+            <span style="font-weight: 600; color: #3b82f6;">Bilgiler</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2;">
+            <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-weight: bold; font-size: 1.125rem; margin-bottom: 0.75rem;">3</div>
+            <span style="font-weight: 600; color: #9ca3af;">Ödeme</span>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 2;">
+            <div style="width: 48px; height: 48px; background: #e5e7eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-weight: bold; font-size: 1.125rem; margin-bottom: 0.75rem;">4</div>
+            <span style="font-weight: 600; color: #9ca3af;">Tamamla</span>
+        </div>
+    </div>
+    <div style="padding: 2rem; background: #f8fafc; border-radius: 12px; text-align: center;">
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Adım 2: Bilgilerinizi Girin</h3>
+        <p style="color: #64748b;">Lütfen kişisel bilgilerinizi doldurun</p>
+    </div>
+</div>`,
+        css: `.stepper-step { transition: all 0.3s; }`,
+        js: `// Stepper navigation`
+    },
+    {
+        id: 98,
+        category: 'Stepper',
+        title: 'Vertical Stepper',
+        html: `<div style="max-width: 600px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <div style="display: flex; flex-direction: column; gap: 2rem;">
+        <div style="display: flex; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✓</div>
+                <div style="width: 2px; flex: 1; background: linear-gradient(to bottom, #667eea, #764ba2); margin: 0.5rem 0;"></div>
+            </div>
+            <div style="flex: 1; padding-bottom: 2rem;">
+                <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Hesap Oluşturuldu</h4>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">Hesabınız başarıyla oluşturuldu</p>
+                <span style="color: #10b981; font-size: 0.875rem; font-weight: 600;">Tamamlandı</span>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);">2</div>
+                <div style="width: 2px; flex: 1; background: #e5e7eb; margin: 0.5rem 0;"></div>
+            </div>
+            <div style="flex: 1; padding-bottom: 2rem;">
+                <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Profil Bilgileri</h4>
+                <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 1rem;">Profil bilgilerinizi ekleyin</p>
+                <span style="color: #3b82f6; font-size: 0.875rem; font-weight: 600;">Devam Ediyor...</span>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="width: 40px; height: 40px; background: #e5e7eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-weight: bold;">3</div>
+            </div>
+            <div style="flex: 1;">
+                <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: #9ca3af;">E-posta Doğrulama</h4>
+                <p style="color: #9ca3af; font-size: 0.875rem;">E-posta adresinizi doğrulayın</p>
+            </div>
+        </div>
+    </div>
+</div>`,
+        css: `.vertical-step-current { box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2); }`,
+        js: `// Vertical stepper logic`
+    },
+    {
+        id: 99,
+        category: 'Tag',
+        title: 'Tag Component',
+        html: `<div style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 2rem;">
+    <span style="background: #eff6ff; color: #3b82f6; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">React</span>
+    <span style="background: #ecfdf5; color: #10b981; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">Vue.js</span>
+    <span style="background: #fef3c7; color: #f59e0b; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">JavaScript</span>
+    <span style="background: #f3e8ff; color: #a855f7; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">TypeScript</span>
+    <span style="background: #fee2e2; color: #ef4444; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">Angular</span>
+    <span style="background: #dbeafe; color: #2563eb; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">Tailwind</span>
+    <span style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.875rem; font-weight: 600;">Premium</span>
+</div>`,
+        css: `.tag:hover { transform: translateY(-2px); }`,
+        js: `// Tag filtering`
+    },
+    {
+        id: 100,
+        category: 'Tag',
+        title: 'Removable Tags',
+        html: `<div style="max-width: 600px; margin: 2rem auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem;">Seçili Etiketler</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
+        <span style="background: #eff6ff; color: #3b82f6; padding: 0.625rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+            React
+            <button style="background: none; border: none; color: #3b82f6; cursor: pointer; font-size: 1.125rem; line-height: 1;">×</button>
+        </span>
+        <span style="background: #ecfdf5; color: #10b981; padding: 0.625rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+            Vue.js
+            <button style="background: none; border: none; color: #10b981; cursor: pointer; font-size: 1.125rem; line-height: 1;">×</button>
+        </span>
+        <span style="background: #fef3c7; color: #f59e0b; padding: 0.625rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+            JavaScript
+            <button style="background: none; border: none; color: #f59e0b; cursor: pointer; font-size: 1.125rem; line-height: 1;">×</button>
+        </span>
+        <span style="background: #f3e8ff; color: #a855f7; padding: 0.625rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+            TypeScript
+            <button style="background: none; border: none; color: #a855f7; cursor: pointer; font-size: 1.125rem; line-height: 1;">×</button>
+        </span>
+    </div>
+    <input type="text" placeholder="Yeni etiket ekle..." style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 1rem;">
+</div>`,
+        css: `.tag-remove:hover { background: rgba(0,0,0,0.1); border-radius: 50%; }`,
+        js: `// Tag add/remove functionality`
+    },
+
+    // TOPLAM: 100 COMPONENT! 🎉
 ];
 
 // Kategorileri otomatik olarak çıkart
