@@ -1059,7 +1059,678 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 function updateProgress(id, value) {
     document.querySelector(\`#\${id} .progress-fill\`).style.width = value + '%';
 }`
-    }
+    },
+
+    // ===== NAVBAR EK BİLEŞENLERİ =====
+    {
+        id: 23,
+        category: 'Navbar',
+        title: 'Dropdown Menu Navbar',
+        html: `<nav style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 1rem 2rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+        <div style="font-size: 1.5rem; font-weight: bold; color: #3b82f6;">Logo</div>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 500;">Ana Sayfa</a>
+            <div style="position: relative;">
+                <button style="color: #374151; background: none; border: none; font-weight: 500; cursor: pointer; padding: 0.5rem 1rem;">Ürünler ▾</button>
+                <div style="position: absolute; top: 100%; left: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px; margin-top: 0.5rem; min-width: 200px; display: none;">
+                    <a href="#" style="display: block; padding: 0.75rem 1rem; color: #374151; text-decoration: none; border-bottom: 1px solid #f3f4f6;">Web App</a>
+                    <a href="#" style="display: block; padding: 0.75rem 1rem; color: #374151; text-decoration: none; border-bottom: 1px solid #f3f4f6;">Mobile App</a>
+                    <a href="#" style="display: block; padding: 0.75rem 1rem; color: #374151; text-decoration: none;">Desktop App</a>
+                </div>
+            </div>
+            <a href="#" style="color: #374151; text-decoration: none; font-weight: 500;">İletişim</a>
+            <button style="background: #3b82f6; color: white; border: none; padding: 0.625rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600;">Giriş Yap</button>
+        </div>
+    </div>
+</nav>`,
+        css: `.navbar-dropdown:hover .dropdown-menu { display: block; }`,
+        js: `// Dropdown hover efekti JS ile de yapılabilir`
+    },
+    {
+        id: 24,
+        category: 'Navbar',
+        title: 'Sidebar Toggle Navbar',
+        html: `<nav style="background: #1f2937; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+        <button style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">☰</button>
+        <div style="font-size: 1.5rem; font-weight: bold;">Dashboard</div>
+    </div>
+    <div style="display: flex; gap: 1.5rem; align-items: center;">
+        <button style="background: none; border: none; color: white; font-size: 1.25rem; cursor: pointer;">🔔</button>
+        <button style="background: none; border: none; color: white; font-size: 1.25rem; cursor: pointer;">⚙️</button>
+        <div style="width: 40px; height: 40px; background: #3b82f6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">JD</div>
+    </div>
+</nav>`,
+        css: `.sidebar-toggle { cursor: pointer; }`,
+        js: `// Sidebar açma/kapama mantığı`
+    },
+    {
+        id: 25,
+        category: 'Navbar',
+        title: 'Search Navbar',
+        html: `<nav style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 1rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem;">
+        <div style="font-size: 1.5rem; font-weight: bold; color: white;">Brand</div>
+        <div style="flex: 1; max-width: 500px;">
+            <input type="text" placeholder="Ara..." style="width: 100%; padding: 0.75rem 1rem; border: none; border-radius: 24px; background: rgba(255,255,255,0.9); font-size: 0.95rem;">
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <button style="background: white; color: #667eea; border: none; padding: 0.625rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: 600;">Kayıt Ol</button>
+        </div>
+    </div>
+</nav>`,
+        css: `.search-nav input:focus { outline: 2px solid white; }`,
+        js: `// Arama fonksiyonu`
+    },
+
+    // ===== HERO EK BİLEŞENLERİ =====
+    {
+        id: 26,
+        category: 'Hero',
+        title: 'Video Background Hero',
+        html: `<section style="position: relative; min-height: 600px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)); z-index: 1;"></div>
+    <div style="position: relative; z-index: 2; padding: 2rem;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1rem; font-weight: 900;">Video Background Hero</h1>
+        <p style="font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.95;">Profesyonel ve etkileyici vitrin alanı</p>
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+            <button style="background: white; color: #667eea; padding: 1rem 2.5rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer;">Başla</button>
+            <button style="background: transparent; color: white; padding: 1rem 2.5rem; border: 2px solid white; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer;">Daha Fazla</button>
+        </div>
+    </div>
+</section>`,
+        css: `/* Video tag eklenebilir position: absolute ile */`,
+        js: `// Video autoplay kontrolü`
+    },
+    {
+        id: 27,
+        category: 'Hero',
+        title: 'Animated Hero',
+        html: `<section style="background: linear-gradient(to bottom right, #1e293b, #334155); color: white; padding: 8rem 2rem; text-align: center; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 20%; left: 10%; width: 300px; height: 300px; background: rgba(59, 130, 246, 0.1); border-radius: 50%; filter: blur(80px);"></div>
+    <div style="position: absolute; bottom: 20%; right: 10%; width: 400px; height: 400px; background: rgba(168, 85, 247, 0.1); border-radius: 50%; filter: blur(80px);"></div>
+    <div style="position: relative; z-index: 1;">
+        <h1 style="font-size: 4rem; margin-bottom: 1.5rem; font-weight: 900; background: linear-gradient(to right, #3b82f6, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Geleceği İnşa Et</h1>
+        <p style="font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">Modern teknolojilerle hayallerinizdeki projeyi gerçeğe dönüştürün</p>
+        <button style="background: linear-gradient(135deg, #3b82f6, #a855f7); color: white; padding: 1.25rem 3rem; border: none; border-radius: 12px; font-size: 1.125rem; font-weight: bold; cursor: pointer; box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);">Keşfet →</button>
+    </div>
+</section>`,
+        css: `@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }`,
+        js: `// Animasyon kontrolleri`
+    },
+    {
+        id: 28,
+        category: 'Hero',
+        title: 'App Landing Hero',
+        html: `<section style="background: white; padding: 4rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div>
+            <span style="background: #dbeafe; color: #3b82f6; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">YENİ SÜRÜM</span>
+            <h1 style="font-size: 3rem; margin: 1.5rem 0 1rem 0; font-weight: 900; color: #1e293b;">Mobil Uygulamanız Bulutta</h1>
+            <p style="font-size: 1.125rem; color: #64748b; margin-bottom: 2rem; line-height: 1.8;">Bulut tabanlı çözümlerimizle işlerinizi her yerden yönetin. Güvenli, hızlı ve kullanıcı dostu.</p>
+            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                <button style="background: #000; color: white; padding: 0.875rem 2rem; border: none; border-radius: 8px; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><span style="font-size: 1.5rem;">🍎</span> App Store</button>
+                <button style="background: #000; color: white; padding: 0.875rem 2rem; border: none; border-radius: 8px; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><span style="font-size: 1.5rem;">📱</span> Play Store</button>
+            </div>
+            <div style="display: flex; gap: 2rem; color: #64748b; font-size: 0.875rem;">
+                <div><strong style="color: #1e293b; font-size: 1.25rem;">10M+</strong><br>İndirme</div>
+                <div><strong style="color: #1e293b; font-size: 1.25rem;">4.8★</strong><br>Puan</div>
+                <div><strong style="color: #1e293b; font-size: 1.25rem;">50+</strong><br>Ülke</div>
+            </div>
+        </div>
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 24px; height: 500px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">📱 App Preview</div>
+    </div>
+</section>`,
+        css: `.app-hero img { box-shadow: 0 20px 60px rgba(0,0,0,0.3); }`,
+        js: `// App store link yönlendirmeleri`
+    },
+
+    // ===== BUTTONS EK BİLEŞENLERİ =====
+    {
+        id: 29,
+        category: 'Buttons',
+        title: 'Gradient Buttons',
+        html: `<div style="display: flex; flex-wrap: wrap; gap: 1rem; padding: 2rem;">
+    <button style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">Purple Gradient</button>
+    <button style="background: linear-gradient(135deg, #f093fb, #f5576c); color: white; padding: 1rem 2rem; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);">Pink Gradient</button>
+    <button style="background: linear-gradient(135deg, #4facfe, #00f2fe); color: white; padding: 1rem 2rem; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);">Blue Gradient</button>
+    <button style="background: linear-gradient(135deg, #43e97b, #38f9d7); color: white; padding: 1rem 2rem; border: none; border-radius: 12px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(67, 233, 123, 0.4);">Green Gradient</button>
+</div>`,
+        css: `.gradient-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }`,
+        js: `// Hover animasyonları`
+    },
+    {
+        id: 30,
+        category: 'Buttons',
+        title: 'Loading Buttons',
+        html: `<div style="display: flex; gap: 1rem; padding: 2rem;">
+    <button style="background: #3b82f6; color: white; padding: 0.875rem 2rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.75rem;">
+        <span style="border: 2px solid white; border-top-color: transparent; width: 16px; height: 16px; border-radius: 50%; animation: spin 1s linear infinite;"></span>
+        Yükleniyor...
+    </button>
+    <button style="background: #10b981; color: white; padding: 0.875rem 2rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">
+        ✓ Tamamlandı
+    </button>
+    <button style="background: #f59e0b; color: white; padding: 0.875rem 2rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; opacity: 0.6;">
+        Beklemede...
+    </button>
+</div>`,
+        css: `@keyframes spin { to { transform: rotate(360deg); } }`,
+        js: `// Loading state yönetimi`
+    },
+    {
+        id: 31,
+        category: 'Buttons',
+        title: 'Social Media Buttons',
+        html: `<div style="display: flex; gap: 1rem; padding: 2rem; flex-wrap: wrap;">
+    <button style="background: #1877f2; color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">📘 Facebook</button>
+    <button style="background: #1da1f2; color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">🐦 Twitter</button>
+    <button style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">📷 Instagram</button>
+    <button style="background: #0077b5; color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">💼 LinkedIn</button>
+    <button style="background: #333; color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">🐙 GitHub</button>
+    <button style="background: #ff0000; color: white; padding: 0.875rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">▶️ YouTube</button>
+</div>`,
+        css: `.social-btn:hover { opacity: 0.9; transform: scale(1.05); }`,
+        js: `// Social media yönlendirmeleri`
+    },
+
+    // ===== YENİ KATEGORİ: INPUT BİLEŞENLERİ =====
+    {
+        id: 32,
+        category: 'Inputs',
+        title: 'Modern Input Fields',
+        html: `<div style="max-width: 500px; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+    <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Standart Input</label>
+        <input type="text" placeholder="Metninizi girin..." style="width: 100%; padding: 0.875rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; transition: all 0.3s;">
+    </div>
+    <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Icon Input</label>
+        <div style="position: relative;">
+            <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.25rem;">📧</span>
+            <input type="email" placeholder="email@example.com" style="width: 100%; padding: 0.875rem 1rem 0.875rem 3rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+        </div>
+    </div>
+    <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Floating Label</label>
+        <input type="text" placeholder=" " style="width: 100%; padding: 1rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+    </div>
+</div>`,
+        css: `input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); }`,
+        js: `// Input validation`
+    },
+    {
+        id: 33,
+        category: 'Inputs',
+        title: 'Search Inputs',
+        html: `<div style="max-width: 600px; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+    <div style="position: relative;">
+        <input type="search" placeholder="Ara..." style="width: 100%; padding: 1rem 3rem 1rem 3rem; border: 2px solid #e5e7eb; border-radius: 24px; font-size: 1rem;">
+        <span style="position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); font-size: 1.25rem; color: #9ca3af;">🔍</span>
+        <button style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: #3b82f6; color: white; border: none; padding: 0.625rem 1.5rem; border-radius: 20px; cursor: pointer; font-weight: 600;">Ara</button>
+    </div>
+    <div style="position: relative;">
+        <input type="search" placeholder="Ürün ara..." style="width: 100%; padding: 1rem 1.25rem; border: 2px solid #3b82f6; border-radius: 12px; font-size: 1rem; background: #eff6ff;">
+        <span style="position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); font-size: 1.25rem; color: #3b82f6;">⌘K</span>
+    </div>
+</div>`,
+        css: `.search-input:focus { box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2); }`,
+        js: `// Keyboard shortcut handling`
+    },
+    {
+        id: 34,
+        category: 'Inputs',
+        title: 'File Upload',
+        html: `<div style="max-width: 500px; padding: 2rem;">
+    <div style="border: 3px dashed #d1d5db; border-radius: 12px; padding: 3rem 2rem; text-align: center; transition: all 0.3s; cursor: pointer;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">📁</div>
+        <h3 style="margin-bottom: 0.5rem; color: #374151;">Dosya Yükle</h3>
+        <p style="color: #6b7280; margin-bottom: 1.5rem;">veya sürükleyip bırakın</p>
+        <input type="file" style="display: none;" id="fileInput">
+        <label for="fileInput" style="background: #3b82f6; color: white; padding: 0.75rem 2rem; border-radius: 8px; cursor: pointer; display: inline-block; font-weight: 600;">Dosya Seç</label>
+        <p style="color: #9ca3af; font-size: 0.875rem; margin-top: 1rem;">PNG, JPG, GIF - Max 10MB</p>
+    </div>
+</div>`,
+        css: `.file-upload:hover { border-color: #3b82f6; background: #eff6ff; }`,
+        js: `// Drag & drop handling`
+    },
+    {
+        id: 35,
+        category: 'Inputs',
+        title: 'Select Dropdown',
+        html: `<div style="max-width: 500px; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+    <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Ülke Seçin</label>
+        <select style="width: 100%; padding: 0.875rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; cursor: pointer; background: white;">
+            <option>Türkiye</option>
+            <option>ABD</option>
+            <option>İngiltere</option>
+            <option>Almanya</option>
+        </select>
+    </div>
+    <div>
+        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Kategori</label>
+        <select style="width: 100%; padding: 0.875rem; border: 2px solid #3b82f6; border-radius: 8px; font-size: 1rem; cursor: pointer; background: #eff6ff;">
+            <option>Teknoloji</option>
+            <option>Tasarım</option>
+            <option>İş</option>
+            <option>Eğitim</option>
+        </select>
+    </div>
+</div>`,
+        css: `select:focus { outline: none; border-color: #3b82f6; }`,
+        js: `// Custom select dropdown`
+    },
+    {
+        id: 36,
+        category: 'Inputs',
+        title: 'Checkbox & Radio',
+        html: `<div style="max-width: 500px; padding: 2rem;">
+    <div style="margin-bottom: 2rem;">
+        <h4 style="margin-bottom: 1rem; color: #374151;">Checkboxes</h4>
+        <label style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; cursor: pointer; border-radius: 8px; transition: background 0.3s;">
+            <input type="checkbox" style="width: 20px; height: 20px; cursor: pointer;">
+            <span>E-posta bildirimleri almak istiyorum</span>
+        </label>
+        <label style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; cursor: pointer; border-radius: 8px;">
+            <input type="checkbox" checked style="width: 20px; height: 20px; cursor: pointer;">
+            <span>Kullanım şartlarını kabul ediyorum</span>
+        </label>
+    </div>
+    <div>
+        <h4 style="margin-bottom: 1rem; color: #374151;">Radio Buttons</h4>
+        <label style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; cursor: pointer;">
+            <input type="radio" name="plan" checked style="width: 18px; height: 18px; cursor: pointer;">
+            <span>Ücretsiz Plan</span>
+        </label>
+        <label style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; cursor: pointer;">
+            <input type="radio" name="plan" style="width: 18px; height: 18px; cursor: pointer;">
+            <span>Pro Plan - ₺99/ay</span>
+        </label>
+        <label style="display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; cursor: pointer;">
+            <input type="radio" name="plan" style="width: 18px; height: 18px; cursor: pointer;">
+            <span>Enterprise - ₺999/ay</span>
+        </label>
+    </div>
+</div>`,
+        css: `label:hover { background: #f9fafb; }`,
+        js: `// Form state management`
+    },
+
+    // ===== YENİ KATEGORİ: GALLERY BİLEŞENLERİ =====
+    {
+        id: 37,
+        category: 'Gallery',
+        title: 'Grid Gallery',
+        html: `<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 2rem;">
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 250px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; cursor: pointer; transition: transform 0.3s;">📷</div>
+    <div style="background: linear-gradient(135deg, #f093fb, #f5576c); height: 250px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; cursor: pointer; transition: transform 0.3s;">🖼️</div>
+    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); height: 250px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; cursor: pointer; transition: transform 0.3s;">🎨</div>
+    <div style="background: linear-gradient(135deg, #43e97b, #38f9d7); height: 250px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; cursor: pointer; transition: transform 0.3s; grid-column: span 2;">🌄</div>
+    <div style="background: linear-gradient(135deg, #fa709a, #fee140); height: 250px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; cursor: pointer; transition: transform 0.3s;">✨</div>
+</div>`,
+        css: `.gallery-item:hover { transform: scale(1.05); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }`,
+        js: `// Lightbox functionality`
+    },
+    {
+        id: 38,
+        category: 'Gallery',
+        title: 'Masonry Gallery',
+        html: `<div style="columns: 3; gap: 1rem; padding: 2rem;">
+    <div style="background: #e5e7eb; height: 200px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; break-inside: avoid;">🌅</div>
+    <div style="background: #dbeafe; height: 300px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; break-inside: avoid;">🏔️</div>
+    <div style="background: #fef3c7; height: 250px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; break-inside: avoid;">🌊</div>
+    <div style="background: #dcfce7; height: 280px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; break-inside: avoid;">🌲</div>
+    <div style="background: #fee2e2; height: 220px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; break-inside: avoid;">🌸</div>
+    <div style="background: #f3e8ff; height: 260px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; break-inside: avoid;">🦋</div>
+</div>`,
+        css: `.masonry-item { break-inside: avoid; }`,
+        js: `// Masonry layout adjustment`
+    },
+    {
+        id: 39,
+        category: 'Gallery',
+        title: 'Carousel Gallery',
+        html: `<div style="max-width: 800px; margin: 2rem auto; position: relative;">
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 400px; border-radius: 16px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; position: relative; overflow: hidden;">
+        <button style="position: absolute; left: 1rem; background: rgba(255,255,255,0.9); border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">‹</button>
+        <span>1 / 5</span>
+        <button style="position: absolute; right: 1rem; background: rgba(255,255,255,0.9); border: none; width: 48px; height: 48px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">›</button>
+    </div>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+        <div style="width: 12px; height: 12px; background: #3b82f6; border-radius: 50%;"></div>
+        <div style="width: 12px; height: 12px; background: #d1d5db; border-radius: 50%;"></div>
+        <div style="width: 12px; height: 12px; background: #d1d5db; border-radius: 50%;"></div>
+        <div style="width: 12px; height: 12px; background: #d1d5db; border-radius: 50%;"></div>
+        <div style="width: 12px; height: 12px; background: #d1d5db; border-radius: 50%;"></div>
+    </div>
+</div>`,
+        css: `.carousel-btn:hover { transform: scale(1.1); }`,
+        js: `// Carousel navigation logic`
+    },
+
+    // ===== YENİ KATEGORİ: DROPDOWN BİLEŞENLERİ =====
+    {
+        id: 40,
+        category: 'Dropdown',
+        title: 'User Profile Dropdown',
+        html: `<div style="position: relative; display: inline-block; padding: 2rem;">
+    <button style="display: flex; align-items: center; gap: 0.75rem; background: white; border: 2px solid #e5e7eb; padding: 0.75rem 1rem; border-radius: 10px; cursor: pointer; transition: all 0.3s;">
+        <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">JD</div>
+        <div style="text-align: left;">
+            <div style="font-weight: 600; font-size: 0.95rem;">John Doe</div>
+            <div style="color: #6b7280; font-size: 0.8rem;">john@example.com</div>
+        </div>
+        <span style="color: #9ca3af;">▾</span>
+    </button>
+    <div style="position: absolute; top: 100%; right: 0; margin-top: 0.5rem; background: white; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); min-width: 220px; border: 1px solid #e5e7eb; overflow: hidden; display: none;">
+        <a href="#" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1rem; color: #374151; text-decoration: none; transition: background 0.2s; border-bottom: 1px solid #f3f4f6;"><span>👤</span> Profil</a>
+        <a href="#" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1rem; color: #374151; text-decoration: none; transition: background 0.2s; border-bottom: 1px solid #f3f4f6;"><span>⚙️</span> Ayarlar</a>
+        <a href="#" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1rem; color: #374151; text-decoration: none; transition: background 0.2s; border-bottom: 1px solid #f3f4f6;"><span>💳</span> Fatura</a>
+        <a href="#" style="display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem 1rem; color: #ef4444; text-decoration: none; transition: background 0.2s;"><span>🚪</span> Çıkış Yap</a>
+    </div>
+</div>`,
+        css: `.dropdown-item:hover { background: #f9fafb; }`,
+        js: `// Dropdown toggle logic`
+    },
+    {
+        id: 41,
+        category: 'Dropdown',
+        title: 'Action Menu Dropdown',
+        html: `<div style="position: relative; display: inline-block; padding: 2rem;">
+    <button style="background: #3b82f6; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+        Aksiyonlar ▾
+    </button>
+    <div style="position: absolute; top: 100%; left: 0; margin-top: 0.5rem; background: white; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); min-width: 200px; overflow: hidden; display: none;">
+        <div style="padding: 0.75rem 1rem; background: #f9fafb; border-bottom: 1px solid #e5e7eb; font-size: 0.75rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em;">Hızlı Eylemler</div>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; color: #374151; text-decoration: none; border-bottom: 1px solid #f3f4f6;"><span>📝 Düzenle</span><span style="color: #9ca3af; font-size: 0.8rem;">⌘E</span></a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; color: #374151; text-decoration: none; border-bottom: 1px solid #f3f4f6;"><span>📋 Kopyala</span><span style="color: #9ca3af; font-size: 0.8rem;">⌘C</span></a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; color: #374151; text-decoration: none; border-bottom: 1px solid #f3f4f6;"><span>📤 Paylaş</span></a>
+        <a href="#" style="display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1rem; color: #ef4444; text-decoration: none;"><span>🗑️ Sil</span><span style="color: #fca5a5; font-size: 0.8rem;">⌘⌫</span></a>
+    </div>
+</div>`,
+        css: `.action-menu-item:hover { background: #f9fafb; }`,
+        js: `// Keyboard shortcuts`
+    },
+
+    // ===== YENİ KATEGORİ: SKELETON BİLEŞENLERİ =====
+    {
+        id: 42,
+        category: 'Skeleton',
+        title: 'Card Skeleton Loader',
+        html: `<div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 350px; margin: 2rem;">
+    <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 180px; border-radius: 8px; margin-bottom: 1rem;"></div>
+    <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 24px; border-radius: 6px; margin-bottom: 0.75rem; width: 70%;"></div>
+    <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 16px; border-radius: 6px; margin-bottom: 0.5rem;"></div>
+    <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 16px; border-radius: 6px; width: 90%;"></div>
+</div>`,
+        css: `@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }`,
+        js: `// Loading state simulation`
+    },
+    {
+        id: 43,
+        category: 'Skeleton',
+        title: 'List Skeleton Loader',
+        html: `<div style="max-width: 600px; padding: 2rem;">
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <div style="width: 60px; height: 60px; background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 50%;"></div>
+        <div style="flex: 1;">
+            <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 16px; border-radius: 6px; margin-bottom: 0.5rem; width: 60%;"></div>
+            <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 14px; border-radius: 6px; width: 40%;"></div>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: white; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <div style="width: 60px; height: 60px; background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 50%;"></div>
+        <div style="flex: 1;">
+            <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 16px; border-radius: 6px; margin-bottom: 0.5rem; width: 70%;"></div>
+            <div style="background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; height: 14px; border-radius: 6px; width: 50%;"></div>
+        </div>
+    </div>
+</div>`,
+        css: `@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }`,
+        js: `// List loading state`
+    },
+
+    // ===== CARDS EK BİLEŞENLERİ =====
+    {
+        id: 44,
+        category: 'Cards',
+        title: 'Stats Card',
+        html: `<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 2rem;">
+    <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #3b82f6;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div>
+                <div style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Toplam Kullanıcı</div>
+                <div style="font-size: 2rem; font-weight: 700; color: #1e293b;">12,543</div>
+            </div>
+            <div style="width: 48px; height: 48px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👥</div>
+        </div>
+        <div style="color: #10b981; font-size: 0.875rem; font-weight: 600;">↑ 12% önceki aya göre</div>
+    </div>
+    <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #10b981;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div>
+                <div style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Gelir</div>
+                <div style="font-size: 2rem; font-weight: 700; color: #1e293b;">₺45,231</div>
+            </div>
+            <div style="width: 48px; height: 48px; background: #ecfdf5; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">💰</div>
+        </div>
+        <div style="color: #10b981; font-size: 0.875rem; font-weight: 600;">↑ 8% önceki aya göre</div>
+    </div>
+    <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 4px solid #f59e0b;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div>
+                <div style="color: #6b7280; font-size: 0.875rem; margin-bottom: 0.5rem;">Aktif Projeler</div>
+                <div style="font-size: 2rem; font-weight: 700; color: #1e293b;">24</div>
+            </div>
+            <div style="width: 48px; height: 48px; background: #fffbeb; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">📊</div>
+        </div>
+        <div style="color: #10b981; font-size: 0.875rem; font-weight: 600;">↑ 3 yeni proje</div>
+    </div>
+</div>`,
+        css: `.stats-card:hover { transform: translateY(-4px); }`,
+        js: `// Real-time stats update`
+    },
+    {
+        id: 45,
+        category: 'Cards',
+        title: 'Blog Card',
+        html: `<div style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); max-width: 380px; margin: 2rem; transition: transform 0.3s;">
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 220px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📝</div>
+    <div style="padding: 1.5rem;">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+            <span style="background: #eff6ff; color: #3b82f6; padding: 0.375rem 0.75rem; border-radius: 16px; font-size: 0.75rem; font-weight: 600;">Teknoloji</span>
+            <span style="background: #f3f4f6; color: #6b7280; padding: 0.375rem 0.75rem; border-radius: 16px; font-size: 0.75rem; font-weight: 600;">5 dk okuma</span>
+        </div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #1e293b;">Modern Web Geliştirme Trendleri 2026</h3>
+        <p style="color: #64748b; margin-bottom: 1.5rem; line-height: 1.6;">Web geliştirme dünyasında 2026 yılında öne çıkacak teknolojiler ve yaklaşımlar...</p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 36px; height: 36px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.875rem;">AY</div>
+                <div>
+                    <div style="font-weight: 600; font-size: 0.875rem; color: #1e293b;">Ahmet Yılmaz</div>
+                    <div style="color: #9ca3af; font-size: 0.75rem;">15 Şubat 2026</div>
+                </div>
+            </div>
+            <button style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.875rem;">Oku →</button>
+        </div>
+    </div>
+</div>`,
+        css: `.blog-card:hover { transform: translateY(-8px); }`,
+        js: `// Blog card interactions`
+    },
+    {
+        id: 46,
+        category: 'Cards',
+        title: 'Feature Card',
+        html: `<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding: 2rem;">
+    <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; transition: all 0.3s;">
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">⚡</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #1e293b;">Hızlı</h3>
+        <p style="color: #64748b; line-height: 1.6;">Lightning-fast performance optimization</p>
+    </div>
+    <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; transition: all 0.3s;">
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">🔒</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #1e293b;">Güvenli</h3>
+        <p style="color: #64748b; line-height: 1.6;">Bank-level security with encryption</p>
+    </div>
+    <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; transition: all 0.3s;">
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">📱</div>
+        <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: #1e293b;">Responsive</h3>
+        <p style="color: #64748b; line-height: 1.6;">Works perfectly on all devices</p>
+    </div>
+</div>`,
+        css: `.feature-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }`,
+        js: `// Feature highlight animations`
+    },
+
+    // ===== FOOTER EK BİLEŞENLERİ =====
+    {
+        id: 47,
+        category: 'Footer',
+        title: 'Newsletter Footer',
+        html: `<footer style="background: linear-gradient(135deg, #1e293b, #334155); color: white; padding: 4rem 2rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 3rem; padding: 3rem 2rem; background: rgba(255,255,255,0.05); border-radius: 16px; backdrop-filter: blur(10px);">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem;">Bültenimize Abone Olun</h3>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Yeni özellikler ve güncellemelerden haberdar olun</p>
+            <div style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="E-posta adresiniz" style="flex: 1; padding: 1rem; border: 2px solid rgba(255,255,255,0.2); border-radius: 8px; background: rgba(255,255,255,0.1); color: white; font-size: 1rem; backdrop-filter: blur(10px);">
+                <button style="background: white; color: #1e293b; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 700; cursor: pointer; white-space: nowrap;">Abone Ol</button>
+            </div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; margin-bottom: 3rem;">
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Ürün</h4>
+                <ul style="list-style: none; color: rgba(255,255,255,0.7);">
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Özellikler</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Fiyatlandırma</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Demo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Şirket</h4>
+                <ul style="list-style: none; color: rgba(255,255,255,0.7);">
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Hakkımızda</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Kariyer</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">İletişim</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Kaynaklar</h4>
+                <ul style="list-style: none; color: rgba(255,255,255,0.7);">
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Dokümantasyon</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Blog</a></li>
+                    <li style="margin-bottom: 0.5rem;"><a href="#" style="color: inherit; text-decoration: none;">Destek</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem; font-size: 1.125rem;">Bizi Takip Edin</h4>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; text-decoration: none; transition: all 0.3s;">📘</a>
+                    <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; text-decoration: none; transition: all 0.3s;">🐦</a>
+                    <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; text-decoration: none; transition: all 0.3s;">📷</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">
+            <p>© 2026 CodeUI. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+</footer>`,
+        css: `footer a:hover { color: white; }`,
+        js: `// Newsletter subscription`
+    },
+
+    // ===== FORMS EK BİLEŞENLERİ =====
+    {
+        id: 48,
+        category: 'Forms',
+        title: 'Multi-Step Form',
+        html: `<div style="max-width: 600px; margin: 2rem auto; background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.1);">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 3rem;">
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-weight: bold;">1</div>
+            <div style="font-size: 0.875rem; color: #667eea; font-weight: 600;">Hesap</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 48px; height: 48px; background: #e5e7eb; color: #9ca3af; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-weight: bold;">2</div>
+            <div style="font-size: 0.875rem; color: #9ca3af; font-weight: 600;">Profil</div>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <div style="width: 48px; height: 48px; background: #e5e7eb; color: #9ca3af; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.5rem; font-weight: bold;">3</div>
+            <div style="font-size: 0.875rem; color: #9ca3af; font-weight: 600;">Tamamla</div>
+        </div>
+    </div>
+    <h2 style="margin-bottom: 0.5rem; color: #1e293b;">Hesap Bilgileri</h2>
+    <p style="color: #64748b; margin-bottom: 2rem;">Lütfen temel bilgilerinizi girin</p>
+    <form>
+        <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">E-posta</label>
+            <input type="email" style="width: 100%; padding: 0.875rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+        </div>
+        <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #374151;">Şifre</label>
+            <input type="password" style="width: 100%; padding: 0.875rem; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+        </div>
+        <button type="button" style="width: 100%; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer;">Devam Et →</button>
+    </form>
+</div>`,
+        css: `.step-active { background: linear-gradient(135deg, #667eea, #764ba2); }`,
+        js: `// Multi-step form navigation`
+    },
+
+    // ===== PRICING EK BİLEŞENLERİ =====
+    {
+        id: 49,
+        category: 'Pricing',
+        title: 'Toggle Pricing',
+        html: `<div style="max-width: 1200px; margin: 2rem auto; padding: 2rem; text-align: center;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #1e293b; font-weight: 800;">Fiyatlandırma Planları</h2>
+    <p style="color: #64748b; margin-bottom: 2rem; font-size: 1.125rem;">İhtiyacınıza uygun planı seçin</p>
+    <div style="display: inline-flex; background: #f3f4f6; padding: 0.375rem; border-radius: 12px; margin-bottom: 3rem;">
+        <button style="background: white; border: none; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Aylık</button>
+        <button style="background: transparent; border: none; padding: 0.75rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer; color: #6b7280;">Yıllık <span style="background: #10b981; color: white; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; margin-left: 0.5rem;">%20 İndirim</span></button>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+        <div style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 2px solid #e5e7eb; text-align: left;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Startup</h3>
+            <p style="color: #64748b; margin-bottom: 2rem;">Küçük ekipler için</p>
+            <div style="margin-bottom: 2rem;">
+                <span style="font-size: 3rem; font-weight: 800;">₺199</span>
+                <span style="color: #6b7280;">/ay</span>
+            </div>
+            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10b981;">✓</span> 10 Kullanıcı</li>
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10b981;">✓</span> 100GB Depolama</li>
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #10b981;">✓</span> Email Destek</li>
+            </ul>
+            <button style="width: 100%; background: #3b82f6; color: white; border: none; padding: 1rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Başla</button>
+        </div>
+        <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 2.5rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4); color: white; text-align: left; transform: scale(1.05);">
+            <div style="background: rgba(255,255,255,0.2); display: inline-block; padding: 0.375rem 0.875rem; border-radius: 16px; font-size: 0.75rem; font-weight: 700; margin-bottom: 1rem;">EN POPÜLER</div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Business</h3>
+            <p style="opacity: 0.9; margin-bottom: 2rem;">Büyüyen ekipler için</p>
+            <div style="margin-bottom: 2rem;">
+                <span style="font-size: 3rem; font-weight: 800;">₺499</span>
+                <span style="opacity: 0.9;">/ay</span>
+            </div>
+            <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 0.5rem;"><span>✓</span> Sınırsız Kullanıcı</li>
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 0.5rem;"><span>✓</span> 1TB Depolama</li>
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 0.5rem;"><span>✓</span> Öncelikli Destek</li>
+                <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 0.5rem;"><span>✓</span> Gelişmiş Analitik</li>
+            </ul>
+            <button style="width: 100%; background: white; color: #667eea; border: none; padding: 1rem; border-radius: 8px; font-weight: 600; cursor: pointer;">Başla</button>
+        </div>
+    </div>
+</div>`,
+        css: `.pricing-toggle:hover { opacity: 0.9; }`,
+        js: `// Toggle monthly/yearly pricing`
+    },
+
+    // TOPLAM: 49 COMPONENT
 ];
 
 // Kategorileri otomatik olarak çıkart
