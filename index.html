@@ -1,450 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Template System - Preview Dashboard</title>
-    <style>
-        :root {
-            --sidebar-width: 280px;
-            --primary-color: #007bff;
-            --bg-color: #f0f2f5;
-            --panel-bg: #ffffff;
-            --text-color: #333;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            background: var(--panel-bg);
-            border-right: 1px solid #ddd;
-            display: flex;
-            flex-direction: column;
-            z-index: 10;
-        }
-
-        .sidebar-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .sidebar-header h1 {
-            font-size: 1.25rem;
-            margin: 0;
-            color: var(--primary-color);
-        }
-
-        .component-list {
-            flex: 1;
-            overflow-y: auto;
-            padding: 1rem 0;
-        }
-
-        .component-item {
-            padding: 0.75rem 1.5rem;
-            cursor: pointer;
-            transition: background 0.2s;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-
-        .component-item:hover {
-            background: #f8f9fa;
-        }
-
-        .component-item.active {
-            background: #e7f1ff;
-            color: var(--primary-color);
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .component-category {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #868e96;
-            letter-spacing: 0.5px;
-            margin-top: 1rem;
-        }
-
-        .component-category:first-child {
-            margin-top: 0;
-        }
-
-        .sidebar-header a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Main Content */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            background: #fff;
-        }
-
-        .toolbar {
-            height: 60px;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            align-items: center;
-            padding: 0 1.5rem;
-            background: #fff;
-            justify-content: space-between;
-        }
-
-        .variant-controls {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .preview-area {
-            flex: 1;
-            background: #e9ecef;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            overflow: hidden;
-        }
-
-        #preview-viewport {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: #fff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            transition: width 0.3s ease;
-        }
-
-        /* UI Controls */
-        select,
-        button {
-            padding: 0.5rem;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            font-size: 0.9rem;
-        }
-
-        .resizer {
-            display: flex;
-            gap: 0.5rem;
-
-        /* Theme toggle in dashboard */
-        .theme-toggle-dashboard {
-            padding: 0.5rem;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: white;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: transform 0.2s;
-        }
-
-        .theme-toggle-dashboard:hover {
-            transform: scale(1.1);
-        }
-
-        /* Code view button */
-        .code-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.6rem 1.25rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: none;
-            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
-        }
-
-        .code-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
-        }
-        }
-
-        .resizer-btn {
-            background: none;
-            border: 1px solid #ddd;
-            cursor: pointer;
-            paddistyle="display: flex; gap: 1rem; align-items: center;">
-                <button class="code-btn" id="view-code-btn">View Code</button>
-                <button class="theme-toggle-dashboard" id="theme-toggle">🌙</button>
-                <div class="resizer">
-                    <button class="resizer-btn active" data-width="100%">Desktop</button>
-                    <button class="resizer-btn" data-width="768px">Tablet</button>
-                    <button class="resizer-btn" data-width="375px">Mobile</button>
-                </div
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-    </style>
+    <title>CodeUI - UI Bileşen Kütüphanesi</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Prism.js - Syntax Highlighting (Dracula Theme) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
 </head>
-
 <body>
-
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h1>🎨 Component Library</h1>
-            <p style="font-size: 0.8rem; color: #666; margin: 0.5rem 0 0 0;">Click any component, then click 📋 to copy code</p>
-        </div>
-        <div class="component-list" id="component-list">
-            <div class="component-category">Layout</div>
-            <div class="component-item active" data-component="header">📱 Header</div>
-            <div class="component-item" data-component="hero">🎯 Hero</div>
-            <div class="component-item" data-component="footer">📄 Footer</div>
-            <div class="component-item" data-component="breadcrumb">🍞 Breadcrumb</div>
-            
-            <div class="component-category">Navigation</div>
-            <div class="component-item" data-component="tabs">📑 Tabs</div>
-            
-            <div class="component-category">Content</div>
-            <div class="component-item" data-component="features">⭐ Features</div>
-            <div class="component-item" data-component="blog">📝 Blog</div>
-            <div class="component-item" data-component="testimonials">💬 Testimonials</div>
-            <div class="component-item" data-component="card">🃏 Card</div>
-            <div class="component-item" data-component="stats">📊 Stats</div>
-            <div class="component-item" data-component="faq">❓ FAQ</div>
-            
-            <div class="component-category">Forms</div>
-            <div class="component-item" data-component="contact-form">📧 Contact Form</div>
-            <div class="component-item" data-component="login-form">🔐 Login Form</div>
-            <div class="component-item" data-component="search-bar">🔍 Search Bar</div>
-            
-            <div class="component-category">Marketing</div>
-            <div class="component-item" data-component="cta">📣 CTA</div>
-            <div class="component-item" data-component="pricing">💰 Pricing</div>
-            <div class="component-item" data-component="newsletter">✉️ Newsletter</div>
-            
-            <div class="component-category">UI Elements</div>
-            <div class="component-item" data-component="alert">⚠️ Alert</div>
-            <div class="component-item" data-component="badge">🏷️ Badge</div>
-            <div class="component-item" data-component="progress">📈 Progress Bar</div>
-            <div class="component-item" data-component="spinner">⏳ Spinner</div>
-        </div>
-    </aside>
-
-    <main class="main-content">
-        <div class="toolbar">
-            <div class="variant-controls">
-                <label>Variant:</label>
-                <select id="variant-select">
-                    <!-- Dynamic -->
-                </select>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="logo">
+                    <span class="logo-icon">&lt;/&gt;</span>
+                    CodeUI
+                </h1>
+                <p class="tagline">Modern Web Bileşenleri</p>
             </div>
-            <div style="display: flex; gap: 1rem; align-items: center;">
-                <button class="code-btn" id="copy-code-btn">📋 Copy Code</button>
-                <button class="theme-toggle-dashboard" id="theme-toggle">🌙</button>
-                <div class="resizer">
-                    <button class="resizer-btn active" data-width="100%">Desktop</button>
-                    <button class="resizer-btn" data-width="768px">Tablet</button>
-                    <button class="resizer-btn" data-width="375px">Mobile</button>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Bileşen ara... (örn: navbar, button)" class="search-input">
+                    <span class="search-icon">🔍</span>
                 </div>
             </div>
         </div>
-        <div class="preview-area">
-            <iframe id="preview-viewport" src="dist/preview-components/header.html"></iframe>
-        </div>
-    </main>
+    </header>
 
-    <script>
-        const componentList = document.getElementById('component-list');
-        const viewport = document.getElementById('preview-viewport');
-        const variantSelect = document.getElementById('variant-select');
-        const resizerBtns = document.querySelectorAll('.resizer-btn');
-        const copyCodeBtn = document.getElementById('copy-code-btn');
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Kategoriler</h3>
+            </div>
+            <nav class="sidebar-nav" id="categoryNav">
+                <!-- Kategoriler dinamik olarak yüklenecek -->
+            </nav>
+        </aside>
 
-        let componentSources = {};
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h2 id="categoryTitle">Tüm Bileşenler</h2>
+                <p id="categoryDescription">Kullanıma hazır modern web bileşenlerini keşfedin</p>
+            </div>
 
-        // Load component sources
-        fetch('dist/component-sources.json')
-            .then(res => res.json())
-            .then(data => {
-                componentSources = data;
-                console.log('Component sources loaded:', Object.keys(componentSources).length, 'components');
-            })
-            .catch(err => console.error('Failed to load component sources:', err));
+            <!-- Components Grid -->
+            <div class="components-grid" id="componentsGrid">
+                <!-- Bileşenler dinamik olarak yüklenecek -->
+            </div>
+        </main>
+    </div>
 
-        const config = {
-            header: ['light', 'dark', 'transparent'],
-            hero: ['centered', 'split'],
-            features: ['grid', 'list'],
-            cta: ['banner', 'card'],
-            footer: ['simple', 'mega'],
-            card: ['default', 'featured', 'horizontal'],
-            testimonials: ['grid', 'carousel', 'single'],
-            blog: ['grid', 'list', 'featured'],
-            newsletter: ['minimal', 'boxed', 'gradient'],
-            pricing: ['simple', 'detailed', 'comparison'],
-            'contact-form': ['minimal', 'boxed', 'split'],
-            'login-form': ['simple', 'card', 'centered'],
-            'search-bar': ['default', 'hero', 'minimal'],
-            stats: ['default', 'gradient', 'minimal'],
-            faq: ['default', 'boxed', 'minimal'],
-            breadcrumb: ['default', 'arrows', 'slashes'],
-            tabs: ['default', 'pills', 'underline'],
-            alert: ['info', 'success', 'warning', 'error'],
-            badge: ['default', 'success', 'warning', 'error'],
-            progress: ['default', 'striped', 'animated'],
-            spinner: ['circle', 'dots', 'pulse', 'bars']
-        };
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toastMessage">Kod kopyalandı!</span>
+    </div>
 
-        function updateVariants(component) {
-            variantSelect.innerHTML = '';
-            const variants = config[component] || ['default'];
-            variants.forEach(v => {
-                const opt = document.createElement('option');
-                opt.value = v;
-                opt.textContent = v.charAt(0).toUpperCase() + v.slice(1);
-                variantSelect.appendChild(opt);
-            });
-        }
-
-        // Copy code functionality
-        copyCodeBtn.addEventListener('click', async () => {
-            const activeComponent = document.querySelector('.component-item.active');
-            if (!activeComponent) return;
-            
-            const component = activeComponent.dataset.component;
-            const source = componentSources[component];
-            
-            if (!source) {
-                alert('Component source not found. Try rebuilding the project.');
-                return;
-            }
-
-            // Create formatted code with HTML, CSS, and JS sections
-            let code = `<!-- ${component.toUpperCase()} COMPONENT -->\n\n`;
-            
-            if (source.html) {
-                code += `<!-- HTML -->\n${source.html}\n\n`;
-            }
-            
-            if (source.css) {
-                code += `<!-- CSS -->\n<style>\n${source.css}\n</style>\n\n`;
-            }
-            
-            if (source.js) {
-                code += `<!-- JavaScript -->\n<script>\n${source.js}\n</script>\n`;
-            }
-
-            try {
-                await navigator.clipboard.writeText(code);
-                
-                // Visual feedback
-                const originalText = copyCodeBtn.textContent;
-                copyCodeBtn.textContent = '✅ Copied!';
-                copyCodeBtn.style.background = '#28a745';
-                
-                setTimeout(() => {
-                    copyCodeBtn.textContent = originalText;
-                    copyCodeBtn.style.background = '#6c757d';
-                }, 2000);
-            } catch (err) {
-                console.error('Failed to copy:', err);
-                alert('Failed to copy code. Please try again.');
-            }
-        });
-
-        componentList.addEventListener('click', (e) => {
-            const item = e.target.closest('.component-item');
-            if (!item) return;
-
-            document.querySelectorAll('.component-item').forEach(el => el.classList.remove('active'));
-            item.classList.add('active');
-
-            const component = item.dataset.component;
-            viewport.src = `dist/preview-components/${component}.html`;
-            updateVariants(component);
-        });
-
-        variantSelect.addEventListener('change', (e) => {
-            const variant = e.target.value;
-            const component = document.querySelector('.component-item.active').dataset.component;
-
-            // In a real system, we'd re-render or use CSS classes.
-            // For this static preview, we inject a script into the iframe to change the class.
-            viewport.contentWindow.postMessage({ type: 'change-variant', variant }, '*');
-        });
-
-        resizerBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                resizerBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                viewport.style.width = btn.dataset.width;
-            });
-        });
-
-        // Theme toggle for dashboard
-        const themeToggle = document.getElementById('theme-toggle');
-        let currentTheme = 'light';
-        
-        themeToggle.addEventListener('click', () => {
-            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            themeToggle.textContent = currentTheme === 'light' ? '🌙' : '☀️';
-            
-            // Also update iframe theme
-            try {
-                viewport.contentWindow.document.documentElement.setAttribute('data-theme', currentTheme);
-            } catch (e) {
-                console.warn('Cannot access iframe:', e);
-            }
-        });
-
-        // Keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            // T for theme toggle
-            if (e.key === 't' && !e.ctrlKey && !e.metaKey) {
-                themeToggle.click();
-            }
-            
-            // C for copy code
-            if ((e.ctrlKey || e.metaKey) && e.key === 'c' && e.shiftKey) {
-                copyCodeBtn.click();
-                e.preventDefault();
-            }
-            
-            // Arrow keys for component navigation
-            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-                const items = Array.from(document.querySelectorAll('.component-item'));
-                const activeIndex = items.findIndex(item => item.classList.contains('active'));
-                
-                let newIndex;
-                if (e.key === 'ArrowDown') {
-                    newIndex = (activeIndex + 1) % items.length;
-                } else {
-                    newIndex = (activeIndex - 1 + items.length) % items.length;
-                }
-                
-                items[newIndex].click();
-                e.preventDefault();
-            }
-        });
-
-        // Initialize variants for the default component
-        updateVariants('header');
-    </script>
+    <!-- Scripts -->
+    <!-- JSZip & FileSaver for ZIP download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    
+    <!-- Prism.js - Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
