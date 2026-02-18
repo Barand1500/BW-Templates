@@ -331,13 +331,13 @@ function initComponent() {
 <div align="center">
 
 ### Homepage
-![Homepage](https://via.placeholder.com/800x450/667eea/ffffff?text=CodeUI+Homepage+Preview)
+![Homepage](./images/image.png)
 
 ### Component Preview
-![Component Preview](https://via.placeholder.com/800x450/764ba2/ffffff?text=Component+Code+Preview)
+![Component Preview](./images/image2.png)
 
 ### Search & Filter
-![Search](https://via.placeholder.com/800x450/3b82f6/ffffff?text=Live+Search+Feature)
+![Search](./images/image3.png)
 
 </div>
 
